@@ -1,0 +1,497 @@
+{
+  "version": "1.0",
+  "total_chunks": 96,
+  "sources": [
+    "chatbot.js",
+    "CV.pdf",
+    "config.js",
+    "index.html",
+    "style.css",
+    "script.js",
+    "README.md",
+    "materials/README.md",
+    "cloudflare-worker.js"
+  ],
+  "chunks": [
+    {
+      "id": "64183bed44",
+      "source": "CV.pdf",
+      "text": "Shreyas GrampurohitDepartment of Electrical Engineering\nIndian Institute of Technology Bombay\nH(+91) 7304187198\nBshreyasgrampurohit@iitb.ac.in\n/gtbGitHub/♀nednLinkedin\nResearch interests\nMy research interests lie at the intersection of deep learning and signal processing, including learning-based inverse\nproblems, compressive sensing, and interpretable recovery, as well as ML for systems and computer architecture.\nEducation\nIndian Institute of Technology BombayNov 2021 - Jun 2026\nB.Tech. and M.Tech."
+    },
+    {
+      "id": "58d3b6f36b",
+      "source": "CV.pdf",
+      "text": "recovery, as well as ML for systems and computer architecture.\nEducation\nIndian Institute of Technology BombayNov 2021 - Jun 2026\nB.Tech. and M.Tech. in Electrical Engineering (Communication and Signal Processing)CPI: 8.99/10\nMinor Degree in Computer Science and Engineering\nHonors and Awards\n{IEEE Computer Architecture Letters publication selected for theBest of CALsession at HPCA 2026(2025)\n{Received theBest Poster Presentation Awardat the RISC Symposium conducted by IIT Bombay(2025)\n{Awarded the Kishore Vaigyanik Protsahan Yojana (KVPY) fellowship with anAll India Rank 198(2021)\n{AchievedAll India Rank 495in JEE Advanced | 99.89 percentile in JEE Main among Million candidates(2021)\n{Secured anAll Maharashtra Rank 13in the MHT-CET examination among 200,000 aspirants(2021)\nPublications\nAccepted / Published"
+    },
+    {
+      "id": "7ccdd613bf",
+      "source": "CV.pdf",
+      "text": "Million candidates(2021)\n{Secured anAll Maharashtra Rank 13in the MHT-CET examination among 200,000 aspirants(2021)\nPublications\nAccepted / Published\n{S Prakash et al.“QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture.\"\nIEEE Computer Architecture Letters (CAL). [PDF](2025)\nSelected for the Best of CAL session at HPCA 2026 (one of 3 papers selected from 90+)\nPreprints / Under Review\n{SJ Grampurohit , S Mulleti, A Rajwade.“Verifiable Deep Quantitative Group Testing.\"[PDF](2025)\n{SJ Grampurohit , S Mulleti, A Rajwade.“Two-Dimensional Tomographic Reconstruction From Projections\nWith Unknown Angles and Unknown Spatial Shifts.\"Under Review at IEEE ICASSP 2026 [PDF](2025)\nResearch Experience\nDeep Learning for Group Testing(Apr 2025 – Present)\nDual Degree Thesis|Guide: Prof. Ajit Rajwade and Prof."
+    },
+    {
+      "id": "a3c8a51b28",
+      "source": "CV.pdf",
+      "text": "CASSP 2026 [PDF](2025)\nResearch Experience\nDeep Learning for Group Testing(Apr 2025 – Present)\nDual Degree Thesis|Guide: Prof. Ajit Rajwade and Prof. Satish Mulleti\n{Designed a noise-robust Deep Learning solver forQuantitative Group Testing, achieving reconstruction\nperformance matching state-of-the-art combinatorial algorithms across varying sparsity levels\n{Establishedstructural verifiabilityby introducing novel Jacobian analysis, showcasing that the network\nimplicitly internalizes the combinatorial structure of the problem rather than merely memorizing statistical\npatterns of the training data\n{Conducted extensive comparisons against model-based solvers likeApproximate Message Passing,\ndemonstrating the framework’s superior signal recovery resilience in regimes with sparse measurement noise"
+    },
+    {
+      "id": "71aa0db0cf",
+      "source": "CV.pdf",
+      "text": "d solvers likeApproximate Message Passing,\ndemonstrating the framework’s superior signal recovery resilience in regimes with sparse measurement noise\n{Extending the framework to recover real-valued signals for applications like viral load estimation, and\nestablishing rigorous theoretical guarantees for data-driven solvers\nArchipedia: Generative AI for Hardware Design(Jan 2024 – Present)\nIn-semester Research|Guide: Prof."
+    },
+    {
+      "id": "b0330c8096",
+      "source": "CV.pdf",
+      "text": "us theoretical guarantees for data-driven solvers\nArchipedia: Generative AI for Hardware Design(Jan 2024 – Present)\nIn-semester Research|Guide: Prof. Vijay Janapa Reddi, Edge Computing Lab,Harvard University\n{Spearheaded the development of \"Archipedia,\" aone-billion-tokendataset covering 50 years of premier\ncomputer architecture research,leadinga team of ten students to execute large-scale data scraping strategies\n{Co-authoredQuArch, a benchmark utilizing the dataset to evaluate LLMs in computer architecture; paper\naccepted to IEEE CAL and selected for ’Best of CAL’ session at HPCA 2026."
+    },
+    {
+      "id": "993ec0a45b",
+      "source": "CV.pdf",
+      "text": "mark utilizing the dataset to evaluate LLMs in computer architecture; paper\naccepted to IEEE CAL and selected for ’Best of CAL’ session at HPCA 2026.\n{Architected metadata extraction and validation pipelines on AWS to parse thousands of academic manuscripts,\ncreating a structured knowledge base designed to answer research questions regarding hardware design evolution\n1/3\n{Collaborating on research questions to answer with Archipedia and on broader directions forfoundation\nmodelsfor computer architecture in general\nArchGym: Open-Source Gymnasium for ML-Assisted Architecture Design(Jun 2023 – Aug 2023)\nResearch Internship|Guide: Prof."
+    },
+    {
+      "id": "2e02b745f7",
+      "source": "CV.pdf",
+      "text": "uter architecture in general\nArchGym: Open-Source Gymnasium for ML-Assisted Architecture Design(Jun 2023 – Aug 2023)\nResearch Internship|Guide: Prof. Vijay Janapa Reddi, Edge Computing Lab,Harvard University\n{Contributed to ArchGym, an open-source framework connecting diverse ML algorithms to architecture simulators\n{Developed ML-basedproxy modelsto mitigate simulator latency, optimizing the accuracy-speed trade-off\n{Led automated documentation generation and authored comprehensive guides to ensure research reproducibility\nTomography Under Unknown Angles and Spatial Shifts(Aug 2024 – Mar 2025)\nResearch Project|Guide: Prof. Ajit Rajwade and Prof."
+    },
+    {
+      "id": "b0da9b1659",
+      "source": "CV.pdf",
+      "text": "research reproducibility\nTomography Under Unknown Angles and Spatial Shifts(Aug 2024 – Mar 2025)\nResearch Project|Guide: Prof. Ajit Rajwade and Prof. Satish Mulleti\n{Developed a robust reconstruction framework for Cryo-EM Tomography to address the ill-posed inverse problem\nof recovering 2D images from projections corrupted by both unknown viewing angles and arbitrary spatial shifts.\n{Formulated athree-way alternating minimizationalgorithm that jointly refines the image and geometry,\nutilizing a shift-awaremodified Graph Laplacianinitialization to prevent local minima."
+    },
+    {
+      "id": "505626ba24",
+      "source": "CV.pdf",
+      "text": "mizationalgorithm that jointly refines the image and geometry,\nutilizing a shift-awaremodified Graph Laplacianinitialization to prevent local minima.\n{Proved the theoretical non-feasibility of spectral invariant estimators for arbitrary translational shifts,\nestablishing the necessity of the proposed iterative refinement approach\n{Achieved2.36times lower RRMSE compared to baselines that neglect shifts; received Best Poster Presentation\nAward at RISC 2025 (IIT Bombay) and manuscript is under review at ICASSP 2026\nProfessional Experience\nDigital Electronics Intern, Texas Instruments(May 2024 – Jul 2024)\nRadar Business Unit|Bengaluru, India\n{Conducted comprehensive performance benchmarking of radar chip architectures usingCoremarkand\nDhrystonesuites, generating critical data to guide architectural trade-offs and design specifications"
+    },
+    {
+      "id": "91a7bdeeac",
+      "source": "CV.pdf",
+      "text": "ng of radar chip architectures usingCoremarkand\nDhrystonesuites, generating critical data to guide architectural trade-offs and design specifications\n{Analyzed cache utilization metrics on aQuickTurn emulator, implementing modifications to cache interactions\nto accurately simulate subsystem algorithms and identify performance bottlenecks\n{Extracted key performance metrics which enabled the team to project a30% reduction in powerand40%\nlower area utilizationfor the optimized architecture\nTeaching and Mentorship\nTeaching Assistant|Signal Processing(Aug 2025 – Nov 2025)\nProf."
+    },
+    {
+      "id": "6869ce1a48",
+      "source": "CV.pdf",
+      "text": "erand40%\nlower area utilizationfor the optimized architecture\nTeaching and Mentorship\nTeaching Assistant|Signal Processing(Aug 2025 – Nov 2025)\nProf. Preeti Rao, Department of Electrical Engineering, IIT Bombay|100+students\nSummer of Science Mentor|Image Processing(May 2025 – Jul 2025)\nMaths and Physics Club, IIT Bombay|Designed the curriculum and guided seven students\nAcademic Projects\nHuman-Feedback-Boosted Generation of Neutrophil Images(Jan 2024 – May 2024)\nMachine Learning and Statistical Methods in Healthcare|Prof."
+    },
+    {
+      "id": "5e06002aa3",
+      "source": "CV.pdf",
+      "text": "mic Projects\nHuman-Feedback-Boosted Generation of Neutrophil Images(Jan 2024 – May 2024)\nMachine Learning and Statistical Methods in Healthcare|Prof. Kshitij Jadhav\n{Traineddiffusion modelfrom scratch to generate synthetic histopathology images to tackle medical image scarcity\n{Designed multi-label reward model to guide clinically plausible image generation from expertpathologist feedback\n{Improved plausibility from82% to 90%via fine-tuning with feature-weighted feedback obtained via Label Studio\nEmbedded DSP System Design(Jan 2025 – Apr 2025)\nDigital Signal Processing Software and Hardware Lab|Prof."
+    },
+    {
+      "id": "2120bed692",
+      "source": "CV.pdf",
+      "text": "weighted feedback obtained via Label Studio\nEmbedded DSP System Design(Jan 2025 – Apr 2025)\nDigital Signal Processing Software and Hardware Lab|Prof. Preeti Rao\n{Optimized real-time FIR & IIR filter implementation on TI ezDSP5515 using C and Assembly withcircular buffers\n{Accelerated spectrum analysis by using DMA withping-pong buffersto feed dedicated FFT hardware accelerator\n{Designed a hardware-basedDTMF decoderand developed multirate filters for DSP systems in GNU Radio\nMarkov Decision Processes and Reinforcement Learning(Jan 2025 – Apr 2025)\nFoundations of Intelligent and Learning Agents|Prof."
+    },
+    {
+      "id": "4b23e621b2",
+      "source": "CV.pdf",
+      "text": "P systems in GNU Radio\nMarkov Decision Processes and Reinforcement Learning(Jan 2025 – Apr 2025)\nFoundations of Intelligent and Learning Agents|Prof. Shivaram Kalyanakrishnan\n{Implemented UCB, KL-UCB, Epsilon-Greedy, Thompson Sampling onmulti-armed stochastic bandits\n{Built MDP planner (Policy Iteration & LP) and encoder/decoder to solve stochastic gridworld game optimally\n{Designed RL agent with CMA-ESpolicy searchfor high-speed autonomous driving across unseen racetracks\n2/3\nDenoising Diffusion Probabilistic Models(Aug 2023 – Nov 2023)\nAdvanced Topics in Machine Learning|Prof."
+    },
+    {
+      "id": "ca91184eaa",
+      "source": "CV.pdf",
+      "text": "tonomous driving across unseen racetracks\n2/3\nDenoising Diffusion Probabilistic Models(Aug 2023 – Nov 2023)\nAdvanced Topics in Machine Learning|Prof. Amit Sethi\n{ImplementedDDPMframework with a custom U-Net architecture to synthesize realistic images from noise\n{Explored and optimizednoise schedulingstrategies (linear vs cosine) to improve training stability\n{Extended the model to color image generation in HSV space, achieving higher quality and diversity of outputs\nEnergy-efficient Spatial Data Prefetcher(Aug 2024 – Nov 2024)\nAdvanced Computer Architecture|Prof."
+    },
+    {
+      "id": "527e9cfd26",
+      "source": "CV.pdf",
+      "text": "achieving higher quality and diversity of outputs\nEnergy-efficient Spatial Data Prefetcher(Aug 2024 – Nov 2024)\nAdvanced Computer Architecture|Prof. Biswabandan Panda\n{Improved energy-efficiency of Bingo Spatial Data Prefetcher by achieving90%accuracy while maintaining speedup\n{Used a confidence-based prefetch filtering mechanism to improve accuracy and evaluated IPC and other metrics\nusing theChampSim simulator\nParallel Simulation of Retinal Neuron Networks(Aug 2024 – Nov 2024)\nHigh Performance Scientific Computing|Prof."
+    },
+    {
+      "id": "907511d7fb",
+      "source": "CV.pdf",
+      "text": "r metrics\nusing theChampSim simulator\nParallel Simulation of Retinal Neuron Networks(Aug 2024 – Nov 2024)\nHigh Performance Scientific Computing|Prof. Shivasubramanian Gopalakrishnan\n{Accelerated neuron network simulations in C ++with OpenMP, achieving4.6×speedupon multi-core processors\n{Implemented inter- and intra-neuron parallelization strategies to scale efficiently to 1000 +computational units\n{Conducted detailedprofilingand performance analysis to identify bottlenecks and validate scalability\nFPGA-based RRAM Characterization Instrument(Jan 2024 – May 2024)\nElectronic Design Lab|Prof."
+    },
+    {
+      "id": "270106f6c1",
+      "source": "CV.pdf",
+      "text": "nalysis to identify bottlenecks and validate scalability\nFPGA-based RRAM Characterization Instrument(Jan 2024 – May 2024)\nElectronic Design Lab|Prof. Siddharth Tallur\n{Led design of analog frontend (amplifiers, ADC/DAC interface) for FPGA-based RRAM characterization system\n{Developed Python GUI to interface FPGA with laptop, enabling real-time control, data acquisition, and visualization\n{Delivered end-to-end hardware pipeline, from schematic and PCB design to prototype testing, achieving <5% error\nStereo Vision and Shape from Shading(Jan 2025 – Apr 2025)\nComputer Vision|Prof."
+    },
+    {
+      "id": "dd4bd05233",
+      "source": "CV.pdf",
+      "text": "om schematic and PCB design to prototype testing, achieving <5% error\nStereo Vision and Shape from Shading(Jan 2025 – Apr 2025)\nComputer Vision|Prof. Subhasis Chaudhuri\n{Implemented stereo vision algorithms on Middlebury dataset to recoverdepth mapswith quantitative evaluation\n{Developed shape-from-shading to reconstruct3D geometryfrom single image under varying noise and illumination\nTechnical Skills\nSoftwares/Languages Python, C, C ++, MATLAB, VHDL, Assembly, GNURadio, Quartus Prime, Keil µVision\nLibraries PyTorch, NumPy, Scikit-Learn, Pandas, Matplotlib, SciPy, OpenCV, Selenium, OpenAI Gym\nMiscellaneousOpenMP, MPI, CUDA C, L ATEX, NgSPICE, Google Cloud Platform, AWS\nRelevant Coursework\nElectrical Engineering Digital Signal Processing, Computer Vision, Markov Chains, Communication Systems,\nApplied Linear Algebra, Communication Networks, Control Systems, Microprocessors,"
+    },
+    {
+      "id": "8c0c0f3d3e",
+      "source": "CV.pdf",
+      "text": "Processing, Computer Vision, Markov Chains, Communication Systems,\nApplied Linear Algebra, Communication Networks, Control Systems, Microprocessors,\nDigital Systems, VLSI Design\nComputer ScienceAdvanced Image Processing, Medical Image Computing, Foundations of Intelligent\nand Learning Agents, Advanced Computer Architecture, Operating Systems, Data\nStructures and Algorithms\nMachine LearningData Science, Advanced Topics in Machine Learning, Machine Learning and\nStatistical Methods in Healthcare\nExtracurricular Activities\n{Volunteered for management and leadership for various treks conducted by the Adventure Club at IIT Bombay\n{Successfully completed one year of professional training under the National Sports Organization (NSO)\n{Attained A2 level proficiency in the German examinations conducted by Goethe Institut, Max Mueller Bhavan"
+    },
+    {
+      "id": "256cc06762",
+      "source": "CV.pdf",
+      "text": "der the National Sports Organization (NSO)\n{Attained A2 level proficiency in the German examinations conducted by Goethe Institut, Max Mueller Bhavan\n{Completed two levels of the Akhil Bharatiya Gandharva Harmonium exams\n3/3"
+    },
+    {
+      "id": "9718fa1b38",
+      "source": "README.md",
+      "text": "# Shreyas Grampurohit - Personal Website\n\nAcademic website with AI-powered chatbot built with vanilla HTML/CSS/JS and Google Gemini API.\n\n## Features\n\n- 📄 Responsive portfolio design\n- 🤖 RAG-based chatbot with knowledge from your documents\n- 📝 Publications, research, projects, and experience sections\n- 🎨 Professional academic styling\n\n## Live Site\n\nVisit: [https://shreyasgrampurohit.github.io/website/](https://shreyasgrampurohit.github.io/website/)\n\n## Chatbot Setup\n\nThe chatbot uses a Cloudflare Worker proxy to securely call Google Gemini API (your API key stays server-side).\n\n### 1. Deploy the Cloudflare Worker\n\n1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) (free account)\n2. Navigate to **Workers & Pages** → **Create Application** → **Create Worker**\n3. Name it (e.g., `gemini-proxy`) and click **Deploy**\n4."
+    },
+    {
+      "id": "afa2b55377",
+      "source": "README.md",
+      "text": "ee account)\n2. Navigate to **Workers & Pages** → **Create Application** → **Create Worker**\n3. Name it (e.g., `gemini-proxy`) and click **Deploy**\n4. Click **Edit code** and replace all content with the code from `cloudflare-worker.js`\n5. Go to **Settings** → **Variables** → **Add variable**:\n - Name: `GEMINI_API_KEY`\n - Value: Your [Gemini API key](https://aistudio.google.com/apikey)\n - Click **Encrypt**\n6. Click **Save and deploy**\n7. Copy your worker URL (e.g., `https://gemini-proxy.your-subdomain.workers.dev`)\n\n### 2. Update Your Website Config\n\nEdit `config.js` and replace the placeholder with your worker URL:\n\n```js\nconst CONFIG = {\n PROXY_URL: 'https://gemini-proxy.your-subdomain.workers.dev',\n};\n```\n\nCommit and push the change.\n\n### Adding Materials\n\n1. Add your documents to the `materials/` folder (PDFs, markdown, text, etc.)\n2."
+    },
+    {
+      "id": "5b14e6a439",
+      "source": "README.md",
+      "text": "ers.dev',\n};\n```\n\nCommit and push the change.\n\n### Adding Materials\n\n1. Add your documents to the `materials/` folder (PDFs, markdown, text, etc.)\n2. Run the build script to update the knowledge base:\n ```bash\n python build_knowledge.py\n ```\n3. Commit and push the updated `knowledge_base.json`\n\n### Requirements\n\nInstall Python dependencies:\n```bash\npip install PyPDF2\n```\n\n### Rebuilding Knowledge Base\n\nAnytime you:\n- Add new files to `materials/`\n- Update your CV\n- Change content in `index.html`\n\nRun:\n```bash\npython build_knowledge.py\n```\n\nThis creates/updates `knowledge_base.json` which the chatbot uses for context.\n\n## File Structure\n\n```\n."
+    },
+    {
+      "id": "29b0b28b74",
+      "source": "README.md",
+      "text": "Run:\n```bash\npython build_knowledge.py\n```\n\nThis creates/updates `knowledge_base.json` which the chatbot uses for context.\n\n## File Structure\n\n```\n.\n├── index.html # Main website\n├── style.css # Styling\n├── script.js # UI interactions\n├── chatbot.js # Chatbot logic\n├── config.js # Proxy URL configuration\n├── cloudflare-worker.js # Worker code (deploy to Cloudflare)\n├── build_knowledge.py # Knowledge base builder\n├── knowledge_base.json # Pre-built search index\n├── materials/ # Your documents (PDFs, papers, etc.)\n├── CV.pdf # Your CV\n└── profile.jpeg # Profile photo\n```\n\n## Customization\n\n- **Colors**: Edit CSS variables in `style.css`\n- **Content**: Update `index.html`\n- **Chatbot behavior**: Modify `SYSTEM_PROMPT` in `chatbot.js`\n- **Search settings**: Adjust `CHUNK_SIZE`, `MAX_CONTEXT_CHUNKS` in `build_knowledge.py` or `chatbot.js`\n\n## Tech Stack"
+    },
+    {
+      "id": "9c341f324f",
+      "source": "README.md",
+      "text": "STEM_PROMPT` in `chatbot.js`\n- **Search settings**: Adjust `CHUNK_SIZE`, `MAX_CONTEXT_CHUNKS` in `build_knowledge.py` or `chatbot.js`\n\n## Tech Stack\n\n- HTML5, CSS3, JavaScript (ES6+)\n- Google Gemini API for LLM responses\n- Cloudflare Workers for secure API proxy\n- TF-IDF for document retrieval\n- PyPDF2 for PDF processing\n- GitHub Pages for hosting\n\n## License\n\nPersonal academic website © 2026 Shreyas Grampurohit"
+    },
+    {
+      "id": "98dabb40c4",
+      "source": "chatbot.js",
+      "text": "/**\n * Chatbot Module\n * RAG-based chatbot that searches a pre-built knowledge base\n * and uses Google Gemini API to generate answers.\n */\n\nconst Chatbot = (() => {\n // --- Configuration ---\n const PROXY_URL = CONFIG.PROXY_URL;\n const KNOWLEDGE_BASE_URL = 'knowledge_base.json';\n const MAX_CONTEXT_CHUNKS = 8;\n const MAX_HISTORY = 10;\n\n // --- State ---\n let knowledgeBase = null;\n let conversationHistory = [];\n let isOpen = false;\n let isLoading = false;\n\n // --- System prompt ---\n const SYSTEM_PROMPT = `You are a helpful assistant on Shreyas Grampurohit's personal academic website. \nYou answer questions about Shreyas based on the provided context from his documents, CV, papers, and website content.\nBe concise, friendly, and accurate. If the context doesn't contain enough information to answer, say so honestly.\nDo not make up information."
+    },
+    {
+      "id": "29f5fcc40e",
+      "source": "chatbot.js",
+      "text": "ontent.\nBe concise, friendly, and accurate. If the context doesn't contain enough information to answer, say so honestly.\nDo not make up information. You can format responses with markdown.\nRefer to Shreyas in third person unless quoting directly.`;\n\n // --- Knowledge Base Loading ---\n async function loadKnowledgeBase() {\n try {\n const response = await fetch(KNOWLEDGE_BASE_URL);\n if (!response.ok) throw new Error(`HTTP ${response.status}`);\n knowledgeBase = await response.json();\n console.log(`Chatbot: Loaded ${knowledgeBase.total_chunks} chunks from ${knowledgeBase.sources.length} sources`);\n return true;\n } catch (err) {\n console.warn('Chatbot: Could not load knowledge base:', err.message);\n return false;\n }\n }\n\n // --- Search / Retrieval ---\n function tokenize(text) {\n return text.toLowerCase()\n .replace(/[^\\w\\s]/g, ' ')\n .split(/\\s+/)\n .filter(w => w.length > 2);\n }"
+    },
+    {
+      "id": "9e65754dee",
+      "source": "chatbot.js",
+      "text": "arch / Retrieval ---\n function tokenize(text) {\n return text.toLowerCase()\n .replace(/[^\\w\\s]/g, ' ')\n .split(/\\s+/)\n .filter(w => w.length > 2);\n }\n\n function computeTFIDF(query, chunks) {\n const queryTokens = tokenize(query);\n if (queryTokens.length === 0) return chunks.map(() => 0);\n\n // Document frequency\n const df = {};\n for (const chunk of chunks) {\n const tokens = new Set(tokenize(chunk.text));\n for (const token of tokens) {\n df[token] = (df[token] || 0) + 1;\n }\n }"
+    },
+    {
+      "id": "5c172cf5f4",
+      "source": "chatbot.js",
+      "text": "for (const chunk of chunks) {\n const tokens = new Set(tokenize(chunk.text));\n for (const token of tokens) {\n df[token] = (df[token] || 0) + 1;\n }\n }\n\n const N = chunks.length;\n const scores = chunks.map(chunk => {\n const chunkTokens = tokenize(chunk.text);\n const tf = {};\n for (const t of chunkTokens) {\n tf[t] = (tf[t] || 0) + 1;\n }\n let score = 0;\n for (const qt of queryTokens) {\n const termFreq = tf[qt] || 0;\n const docFreq = df[qt] || 0;\n if (termFreq > 0 && docFreq > 0) {\n const idf = Math.log(N / docFreq);\n score += (termFreq / chunkTokens.length) * idf;\n }\n }\n // Boost exact phrase matches\n if (chunk.text.toLowerCase().includes(query.toLowerCase())) {\n score *= 2;\n }\n return score;\n });\n\n return scores;\n }\n\n function searchKnowledge(query) {\n if (!knowledgeBase || !knowledgeBase.chunks.length) return [];"
+    },
+    {
+      "id": "1caf0635eb",
+      "source": "chatbot.js",
+      "text": "*= 2;\n }\n return score;\n });\n\n return scores;\n }\n\n function searchKnowledge(query) {\n if (!knowledgeBase || !knowledgeBase.chunks.length) return [];\n\n const scores = computeTFIDF(query, knowledgeBase.chunks);\n const ranked = knowledgeBase.chunks\n .map((chunk, i) => ({ ...chunk, score: scores[i] }))\n .filter(c => c.score > 0)\n .sort((a, b) => b.score - a.score)\n .slice(0, MAX_CONTEXT_CHUNKS);\n\n return ranked;\n }\n\n // --- Gemini API (via proxy) ---\n async function callGemini(query, contextChunks) {\n if (!PROXY_URL) throw new Error('Proxy URL not configured');\n\n const contextText = contextChunks.length > 0\n ? contextChunks.map(c => `[Source: ${c.source}]\\n${c.text}`).join('\\n\\n---\\n\\n')\n : 'No specific context found in the knowledge base.';\n\n // Build messages\n const contents = [];"
+    },
+    {
+      "id": "e678647cca",
+      "source": "chatbot.js",
+      "text": "urce: ${c.source}]\\n${c.text}`).join('\\n\\n---\\n\\n')\n : 'No specific context found in the knowledge base.';\n\n // Build messages\n const contents = [];\n\n // Add conversation history (limited)\n const recentHistory = conversationHistory.slice(-MAX_HISTORY);\n for (const msg of recentHistory) {\n contents.push({\n role: msg.role === 'user' ? 'user' : 'model',\n parts: [{ text: msg.text }]\n });\n }\n\n // Add current query with context\n const userMessage = `Context from Shreyas's documents:\\n\\n${contextText}\\n\\n---\\n\\nQuestion: ${query}`;\n contents.push({\n role: 'user',\n parts: [{ text: userMessage }]\n });\n\n const body = {\n contents,\n systemInstruction: {\n parts: [{ text: SYSTEM_PROMPT }]\n },\n generationConfig: {\n temperature: 0.7,\n maxOutputTokens: 1024,\n }\n };"
+    },
+    {
+      "id": "d9ff859f77",
+      "source": "chatbot.js",
+      "text": "dy = {\n contents,\n systemInstruction: {\n parts: [{ text: SYSTEM_PROMPT }]\n },\n generationConfig: {\n temperature: 0.7,\n maxOutputTokens: 1024,\n }\n };\n\n const response = await fetch(PROXY_URL, {\n method: 'POST',\n headers: { 'Content-Type': 'application/json' },\n body: JSON.stringify(body),\n });\n\n if (!response.ok) {\n const err = await response.json().catch(() => ({}));\n if (response.status === 429) throw new Error('Rate limit reached."
+    },
+    {
+      "id": "04b91a3beb",
+      "source": "chatbot.js",
+      "text": ",\n });\n\n if (!response.ok) {\n const err = await response.json().catch(() => ({}));\n if (response.status === 429) throw new Error('Rate limit reached. Please wait a moment and try again.');\n throw new Error(err?.error?.message || `API error ${response.status}`);\n }\n\n const data = await response.json();\n const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text;\n if (!reply) throw new Error('No response from Gemini');\n\n return reply;\n }\n\n // --- Chat Logic ---\n async function handleUserMessage(message) {\n if (isLoading) return;\n if (!message.trim()) return;\n\n // Add user message to UI and history\n appendMessage('user', message);\n conversationHistory.push({ role: 'user', text: message });\n\n isLoading = true;\n showTypingIndicator();\n\n try {\n // Search knowledge base\n const relevant = searchKnowledge(message);\n\n // Call Gemini\n const reply = await callGemini(message, relevant);"
+    },
+    {
+      "id": "9a34853888",
+      "source": "chatbot.js",
+      "text": ";\n\n try {\n // Search knowledge base\n const relevant = searchKnowledge(message);\n\n // Call Gemini\n const reply = await callGemini(message, relevant);\n\n removeTypingIndicator();\n appendMessage('bot', reply);\n conversationHistory.push({ role: 'assistant', text: reply });\n } catch (err) {\n removeTypingIndicator();\n appendMessage('bot', `⚠️ ${err.message}`, true);\n } finally {\n isLoading = false;\n }\n }\n\n // --- Markdown rendering (lightweight) ---\n function renderMarkdown(text) {\n let html = text\n // Code blocks\n .replace(/```(\\w*)\\n([\\s\\S]*?)```/g, '<pre><code>$2</code></pre>')\n // Inline code\n .replace(/`([^`]+)`/g, '<code>$1</code>')\n // Bold\n .replace(/\\*\\*(.+?)\\*\\*/g, '<strong>$1</strong>')\n // Italic\n .replace(/\\*(.+?)\\*/g, '<em>$1</em>')\n // Links\n .replace(/\\[([^\\]]+)\\]\\(([^)]+)\\)/g, '<a href=\"$2\" target=\"_blank\">$1</a>')\n // Line breaks\n .replace(/\\n/g, '<br>');\n return html;\n }"
+    },
+    {
+      "id": "edf659bcbb",
+      "source": "chatbot.js",
+      "text": "')\n // Links\n .replace(/\\[([^\\]]+)\\]\\(([^)]+)\\)/g, '<a href=\"$2\" target=\"_blank\">$1</a>')\n // Line breaks\n .replace(/\\n/g, '<br>');\n return html;\n }\n\n // --- UI ---\n function createUI() {\n // Floating button\n const fab = document.createElement('button');\n fab.className = 'chatbot-fab';\n fab.id = 'chatbot-fab';\n fab.innerHTML = '<i class=\"fas fa-comment-dots\"></i>';\n fab.setAttribute('aria-label', 'Open chat');\n fab.addEventListener('click', toggleChat);"
+    },
+    {
+      "id": "7703dbceb1",
+      "source": "chatbot.js",
+      "text": "';\n fab.innerHTML = '<i class=\"fas fa-comment-dots\"></i>';\n fab.setAttribute('aria-label', 'Open chat');\n fab.addEventListener('click', toggleChat);\n\n // Chat window\n const chatWindow = document.createElement('div');\n chatWindow.className = 'chatbot-window';\n chatWindow.id = 'chatbot-window';\n chatWindow.innerHTML = `\n <div class=\"chatbot-header\">\n <div class=\"chatbot-header-info\">\n <div class=\"chatbot-avatar\">SG</div>\n <div>\n <div class=\"chatbot-header-title\">Chat with Shreyas's AI</div>\n <div class=\"chatbot-header-subtitle\">Ask about my research, experience, or skills</div>\n </div>\n </div>\n <button class=\"chatbot-close\" id=\"chatbot-close\" aria-label=\"Close chat\">\n <i class=\"fas fa-times\"></i>\n </button>\n </div>\n <div class=\"chatbot-messages\" id=\"chatbot-messages\"></div>\n <div class=\"chatbot-input-area\" id=\"chatbot-input-area\">"
+    },
+    {
+      "id": "6583248226",
+      "source": "chatbot.js",
+      "text": "-times\"></i>\n </button>\n </div>\n <div class=\"chatbot-messages\" id=\"chatbot-messages\"></div>\n <div class=\"chatbot-input-area\" id=\"chatbot-input-area\">\n <textarea id=\"chatbot-input\" placeholder=\"Ask me anything...\" rows=\"1\"></textarea>\n <button id=\"chatbot-send\" aria-label=\"Send message\">\n <i class=\"fas fa-paper-plane\"></i>\n </button>\n </div>\n `;\n\n document.body.appendChild(fab);\n document.body.appendChild(chatWindow);\n\n // Event listeners\n document.getElementById('chatbot-close').addEventListener('click', toggleChat);\n document.getElementById('chatbot-send').addEventListener('click', sendMessage);\n \n const input = document.getElementById('chatbot-input');\n input.addEventListener('keydown', (e) => {\n if (e.key === 'Enter' && !e.shiftKey) {\n e.preventDefault();\n sendMessage();\n }\n });\n input.addEventListener('input', autoResize);"
+    },
+    {
+      "id": "30378086ea",
+      "source": "chatbot.js",
+      "text": "ydown', (e) => {\n if (e.key === 'Enter' && !e.shiftKey) {\n e.preventDefault();\n sendMessage();\n }\n });\n input.addEventListener('input', autoResize);\n\n // Show welcome message on first open\n setTimeout(() => {\n if (document.getElementById('chatbot-messages').children.length === 0) {\n appendMessage('bot', \"Hi! 👋 I'm an AI assistant for Shreyas's website. Ask me about his research, publications, experience, skills, or anything else you'd like to know!\");\n }\n }, 100);\n }"
+    },
+    {
+      "id": "0559b00d57",
+      "source": "chatbot.js",
+      "text": "ssistant for Shreyas's website. Ask me about his research, publications, experience, skills, or anything else you'd like to know!\");\n }\n }, 100);\n }\n\n function toggleChat() {\n isOpen = !isOpen;\n const window = document.getElementById('chatbot-window');\n const fab = document.getElementById('chatbot-fab');\n window.classList.toggle('open', isOpen);\n fab.classList.toggle('active', isOpen);\n \n if (isOpen) {\n fab.innerHTML = '<i class=\"fas fa-times\"></i>';\n const input = document.getElementById('chatbot-input');\n setTimeout(() => input.focus(), 300);\n } else {\n fab.innerHTML = '<i class=\"fas fa-comment-dots\"></i>';\n }\n }\n\n function sendMessage() {\n const input = document.getElementById('chatbot-input');\n const msg = input.value.trim();\n if (!msg || isLoading) return;\n input.value = '';\n input.style.height = 'auto';\n handleUserMessage(msg);\n }"
+    },
+    {
+      "id": "006cd36f43",
+      "source": "chatbot.js",
+      "text": "put');\n const msg = input.value.trim();\n if (!msg || isLoading) return;\n input.value = '';\n input.style.height = 'auto';\n handleUserMessage(msg);\n }\n\n function appendMessage(role, text, isError = false) {\n const container = document.getElementById('chatbot-messages');\n const bubble = document.createElement('div');\n bubble.className = `chatbot-msg chatbot-msg-${role}${isError ? ' chatbot-msg-error' : ''}`;\n \n if (role === 'bot') {\n bubble.innerHTML = renderMarkdown(text);\n } else {\n bubble.textContent = text;\n }\n\n container.appendChild(bubble);\n container.scrollTop = container.scrollHeight;\n }"
+    },
+    {
+      "id": "093f93df24",
+      "source": "chatbot.js",
+      "text": "= renderMarkdown(text);\n } else {\n bubble.textContent = text;\n }\n\n container.appendChild(bubble);\n container.scrollTop = container.scrollHeight;\n }\n\n function showTypingIndicator() {\n const container = document.getElementById('chatbot-messages');\n const indicator = document.createElement('div');\n indicator.className = 'chatbot-msg chatbot-msg-bot chatbot-typing';\n indicator.id = 'chatbot-typing';\n indicator.innerHTML = '<span></span><span></span><span></span>';\n container.appendChild(indicator);\n container.scrollTop = container.scrollHeight;\n }\n\n function removeTypingIndicator() {\n const el = document.getElementById('chatbot-typing');\n if (el) el.remove();\n }\n\n function autoResize() {\n this.style.height = 'auto';\n this.style.height = Math.min(this.scrollHeight, 120) + 'px';\n }\n\n // --- Init ---\n async function init() {\n createUI();\n await loadKnowledgeBase();\n }"
+    },
+    {
+      "id": "346adaf0ea",
+      "source": "chatbot.js",
+      "text": "is.style.height = Math.min(this.scrollHeight, 120) + 'px';\n }\n\n // --- Init ---\n async function init() {\n createUI();\n await loadKnowledgeBase();\n }\n\n // Public API\n return { init };\n})();\n\n// Auto-init when DOM is ready\ndocument.addEventListener('DOMContentLoaded', () => Chatbot.init());"
+    },
+    {
+      "id": "b633216c1b",
+      "source": "cloudflare-worker.js",
+      "text": "/**\n * Cloudflare Worker - Gemini API Proxy\n * \n * Securely proxies requests to Google Gemini API, keeping your API key server-side.\n * \n * Setup:\n * 1. Go to https://dash.cloudflare.com/\n * 2. Workers & Pages > Create Application > Create Worker\n * 3. Name it (e.g., \"gemini-proxy\")\n * 4. Deploy, then click \"Edit code\"\n * 5. Replace all code with this file's contents\n * 6. Go to Settings > Variables > Add variable:\n * - Name: GEMINI_API_KEY\n * - Value: your actual API key\n * - Click \"Encrypt\"\n * 7. Save and deploy\n * 8. Copy your worker URL (e.g., https://gemini-proxy.YOUR_SUBDOMAIN.workers.dev)\n * 9."
+    },
+    {
+      "id": "1d426db98f",
+      "source": "cloudflare-worker.js",
+      "text": "ur actual API key\n * - Click \"Encrypt\"\n * 7. Save and deploy\n * 8. Copy your worker URL (e.g., https://gemini-proxy.YOUR_SUBDOMAIN.workers.dev)\n * 9. Update PROXY_URL in your website's config.js\n */\n\nconst GEMINI_MODEL = 'gemini-2.0-flash';\nconst GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;\n\n// CORS headers for your website\nconst CORS_HEADERS = {\n 'Access-Control-Allow-Origin': '*', // In production, restrict to your domain\n 'Access-Control-Allow-Methods': 'POST, OPTIONS',\n 'Access-Control-Allow-Headers': 'Content-Type',\n};\n\nexport default {\n async fetch(request, env) {\n // Handle CORS preflight\n if (request.method === 'OPTIONS') {\n return new Response(null, { headers: CORS_HEADERS });\n }"
+    },
+    {
+      "id": "1ccecda64f",
+      "source": "cloudflare-worker.js",
+      "text": "async fetch(request, env) {\n // Handle CORS preflight\n if (request.method === 'OPTIONS') {\n return new Response(null, { headers: CORS_HEADERS });\n }\n\n // Only allow POST\n if (request.method !== 'POST') {\n return new Response(JSON.stringify({ error: 'Method not allowed' }), {\n status: 405,\n headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' },\n });\n }\n\n try {\n // Get the request body\n const body = await request.json();\n\n // Validate required fields\n if (!body.contents || !Array.isArray(body.contents)) {\n return new Response(JSON.stringify({ error: 'Invalid request: contents required' }), {\n status: 400,\n headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' },\n });\n }"
+    },
+    {
+      "id": "db96093261",
+      "source": "cloudflare-worker.js",
+      "text": "ringify({ error: 'Invalid request: contents required' }), {\n status: 400,\n headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' },\n });\n }\n\n // Get API key from environment variable\n const apiKey = env.GEMINI_API_KEY;\n if (!apiKey) {\n return new Response(JSON.stringify({ error: 'API key not configured' }), {\n status: 500,\n headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' },\n });\n }\n\n // Forward to Gemini API\n const geminiResponse = await fetch(`${GEMINI_API_URL}?key=${apiKey}`, {\n method: 'POST',\n headers: { 'Content-Type': 'application/json' },\n body: JSON.stringify(body),\n });\n\n const geminiData = await geminiResponse.json();\n\n // Return the response\n return new Response(JSON.stringify(geminiData), {\n status: geminiResponse.status,\n headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' },\n });"
+    },
+    {
+      "id": "11d500313b",
+      "source": "cloudflare-worker.js",
+      "text": "n new Response(JSON.stringify(geminiData), {\n status: geminiResponse.status,\n headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' },\n });\n\n } catch (err) {\n return new Response(JSON.stringify({ error: err.message }), {\n status: 500,\n headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' },\n });\n }\n },\n};"
+    },
+    {
+      "id": "235c4ce6f8",
+      "source": "config.js",
+      "text": "// Configuration file for the website\n// This file should be committed — it only contains the proxy URL (no secrets)\n\nconst CONFIG = {\n // Replace with your Cloudflare Worker URL after deployment\n PROXY_URL: 'website-gemini-proxy.shreyasg0512.workers.dev',\n};"
+    },
+    {
+      "id": "dcef8ad964",
+      "source": "index.html",
+      "text": "Shreyas Grampurohit SG About Publications Research Experience Projects Teaching Skills Shreyas Grampurohit B.Tech. & M.Tech. in Electrical Engineering Indian Institute of Technology Bombay Research at the intersection of deep learning , signal processing , and computer architecture Email GitHub LinkedIn CV About Me I am a final-year Dual Degree (B.Tech. + M.Tech.) student in the Department of Electrical Engineering at IIT Bombay , specializing in Communication and Signal Processing with a minor in Computer Science and Engineering. My research interests lie at the intersection of deep learning and signal processing , including learning-based inverse problems, compressive sensing, and interpretable recovery, as well as ML for systems and computer architecture . I have had the privilege of collaborating with Prof. Ajit Rajwade and Prof. Satish Mulleti at IIT Bombay, and Prof."
+    },
+    {
+      "id": "08baf6d756",
+      "source": "index.html",
+      "text": "stems and computer architecture . I have had the privilege of collaborating with Prof. Ajit Rajwade and Prof. Satish Mulleti at IIT Bombay, and Prof. Vijay Janapa Reddi at the Edge Computing Lab, Harvard University. Education IIT Bombay B.Tech. & M.Tech. in EE Minor in CS&E CPI: 8.99/10 Nov 2021 — Jun 2026 Honors Best of CAL at HPCA 2026 Best Poster at RISC 2025 KVPY Fellow (AIR 198) JEE Advanced AIR 495 Interests Inverse Problems Compressive Sensing Interpretable Recovery ML for Architecture Publications Accepted / Published QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture Shvetank Prakash, Andrew Cheng, Jason Yik, Arya Tschand, Radhika Ghosal, Ikechukwu Uchendu, Jessica Quaye, Jeffrey Ma, Shreyas Grampurohit, Sofia Giannuzzi, Arnav Balyan, Fin Amin, Aadya Pipersenia, Yash Choudhary, Ankita Nayak, Amir Yazdanbakhsh, Vijay Janapa Reddi IEEE Computer"
+    },
+    {
+      "id": "6b32e17d5f",
+      "source": "index.html",
+      "text": "purohit, Sofia Giannuzzi, Arnav Balyan, Fin Amin, Aadya Pipersenia, Yash Choudhary, Ankita Nayak, Amir Yazdanbakhsh, Vijay Janapa Reddi IEEE Computer Architecture Letters (CAL) , 2025 Selected for the Best of CAL session at HPCA 2026 (one of 3 papers from 90+) PDF Two-Dimensional Tomographic Reconstruction From Projections With Unknown Angles and Unknown Spatial Shifts SJ Grampurohit, S Mulleti, A Rajwade IEEE ICASSP 2026 PDF Preprints / Under Review Verifiable Deep Quantitative Group Testing SJ Grampurohit, S Mulleti, A Rajwade Preprint, 2025 PDF Research Experience Deep Learning for Group Testing Apr 2025 — Present Dual Degree Thesis | Guide: Prof. Ajit Rajwade & Prof."
+    },
+    {
+      "id": "34f97ef547",
+      "source": "index.html",
+      "text": "wade Preprint, 2025 PDF Research Experience Deep Learning for Group Testing Apr 2025 — Present Dual Degree Thesis | Guide: Prof. Ajit Rajwade & Prof. Satish Mulleti Designed a noise-robust Deep Learning solver for Quantitative Group Testing, achieving reconstruction performance matching state-of-the-art combinatorial algorithms Established structural verifiability by introducing novel Jacobian analysis, showcasing that the network implicitly internalizes the combinatorial structure of the problem Demonstrated superior signal recovery resilience in regimes with sparse measurement noise compared to model-based solvers like Approximate Message Passing Extending the framework to real-valued signal recovery for applications like viral load estimation with rigorous theoretical guarantees Archipedia: Generative AI for Hardware Design Jan 2024 — Present In-semester Research | Guide: Prof."
+    },
+    {
+      "id": "87175ba769",
+      "source": "index.html",
+      "text": "estimation with rigorous theoretical guarantees Archipedia: Generative AI for Hardware Design Jan 2024 — Present In-semester Research | Guide: Prof. Vijay Janapa Reddi, Harvard University Spearheaded \"Archipedia,\" a one-billion-token dataset covering 50 years of premier computer architecture research, leading a team of 10 students Co-authored QuArch benchmark for evaluating LLMs in computer architecture; paper accepted to IEEE CAL and selected for 'Best of CAL' at HPCA 2026 Architected metadata extraction and validation pipelines on AWS to parse thousands of academic manuscripts Tomography Under Unknown Angles and Spatial Shifts Aug 2024 — Mar 2025 Research Project | Guide: Prof. Ajit Rajwade & Prof."
+    },
+    {
+      "id": "a03a052ae0",
+      "source": "index.html",
+      "text": "s of academic manuscripts Tomography Under Unknown Angles and Spatial Shifts Aug 2024 — Mar 2025 Research Project | Guide: Prof. Ajit Rajwade & Prof. Satish Mulleti Developed a robust reconstruction framework for Cryo-EM Tomography addressing the ill-posed inverse problem of recovering 2D images from corrupted projections Formulated a three-way alternating minimization algorithm with shift-aware modified Graph Laplacian initialization Proved theoretical non-feasibility of spectral invariant estimators for arbitrary translational shifts Achieved 2.36× lower RRMSE compared to baselines; Best Poster Award at RISC 2025 ArchGym: ML-Assisted Architecture Design Jun 2023 — Aug 2023 Research Internship | Guide: Prof."
+    },
+    {
+      "id": "1f21c5b150",
+      "source": "index.html",
+      "text": "compared to baselines; Best Poster Award at RISC 2025 ArchGym: ML-Assisted Architecture Design Jun 2023 — Aug 2023 Research Internship | Guide: Prof. Vijay Janapa Reddi, Harvard University Contributed to ArchGym, an open-source framework connecting diverse ML algorithms to architecture simulators Developed ML-based proxy models to mitigate simulator latency, optimizing the accuracy-speed trade-off Led automated documentation generation and authored comprehensive guides for research reproducibility Professional Experience Digital Electronics Intern — Texas Instruments May 2024 — Jul 2024 Radar Business Unit | Bengaluru, India Conducted comprehensive performance benchmarking of radar chip architectures using Coremark and Dhrystone suites Analyzed cache utilization metrics on a QuickTurn emulator, implementing modifications to cache interactions Extracted key performance metrics enabling"
+    },
+    {
+      "id": "abb8c20a81",
+      "source": "index.html",
+      "text": "alyzed cache utilization metrics on a QuickTurn emulator, implementing modifications to cache interactions Extracted key performance metrics enabling projected 30% reduction in power and 40% lower area utilization Academic Projects Neutrophil Image Generation with Human Feedback ML in Healthcare | Prof. Kshitij Jadhav Trained diffusion model for synthetic histopathology images. Designed multi-label reward model from expert pathologist feedback, improving plausibility from 82% to 90%. Jan — May 2024 Embedded DSP System Design DSP Lab | Prof. Preeti Rao Optimized real-time FIR & IIR filters on TI ezDSP5515. Accelerated spectrum analysis with DMA ping-pong buffers and developed DTMF decoder with GNU Radio. Jan — Apr 2025 Reinforcement Learning & MDPs FILA | Prof. Shivaram Kalyanakrishnan Implemented UCB, KL-UCB, Thompson Sampling on bandits."
+    },
+    {
+      "id": "b90ecb0c0c",
+      "source": "index.html",
+      "text": "GNU Radio. Jan — Apr 2025 Reinforcement Learning & MDPs FILA | Prof. Shivaram Kalyanakrishnan Implemented UCB, KL-UCB, Thompson Sampling on bandits. Built MDP planner and designed RL agent with CMA-ES for autonomous driving. Jan — Apr 2025 Denoising Diffusion Probabilistic Models Advanced ML | Prof. Amit Sethi Implemented DDPM with custom U-Net architecture. Explored noise scheduling strategies and extended to color image generation in HSV space. Aug — Nov 2023 Energy-efficient Spatial Data Prefetcher Advanced Architecture | Prof. Biswabandan Panda Improved energy-efficiency of Bingo Spatial Data Prefetcher achieving 90% accuracy while maintaining speedup. Evaluated using ChampSim simulator. Aug — Nov 2024 Parallel Retinal Neuron Network Simulation HPC | Prof. Shivasubramanian Gopalakrishnan Accelerated neuron network simulations with OpenMP, achieving 4.6× speedup."
+    },
+    {
+      "id": "42eed8f182",
+      "source": "index.html",
+      "text": "nal Neuron Network Simulation HPC | Prof. Shivasubramanian Gopalakrishnan Accelerated neuron network simulations with OpenMP, achieving 4.6× speedup. Scaled to 1000+ computational units with detailed profiling. Aug — Nov 2024 FPGA-based RRAM Characterization Electronic Design Lab | Prof. Siddharth Tallur Led analog frontend design for FPGA-based RRAM system. Developed Python GUI for real-time control and data acquisition, achieving <5% error. Jan — May 2024 Stereo Vision & Shape from Shading Computer Vision | Prof. Subhasis Chaudhuri Implemented stereo vision algorithms on Middlebury dataset. Developed shape-from-shading for 3D geometry reconstruction under varying conditions. Jan — Apr 2025 Teaching & Mentorship Teaching Assistant — Signal Processing Prof. Preeti Rao, Dept."
+    },
+    {
+      "id": "d851438ae1",
+      "source": "index.html",
+      "text": "geometry reconstruction under varying conditions. Jan — Apr 2025 Teaching & Mentorship Teaching Assistant — Signal Processing Prof. Preeti Rao, Dept. of Electrical Engineering, IIT Bombay 100+ students | Aug — Nov 2025 Summer of Science Mentor — Image Processing Maths and Physics Club, IIT Bombay Designed curriculum and guided 7 students | May — Jul 2025 Technical Skills Languages & Tools Python C C++ MATLAB VHDL Assembly GNURadio Quartus Prime Keil µVision Libraries PyTorch NumPy Scikit-Learn Pandas Matplotlib SciPy OpenCV Selenium OpenAI Gym Infrastructure & HPC OpenMP MPI CUDA C LaTeX NgSPICE Google Cloud Platform AWS &copy; 2026 Shreyas Grampurohit"
+    },
+    {
+      "id": "8aea965ccd",
+      "source": "materials/README.md",
+      "text": "# Materials Folder\n\nAdd your documents here for the chatbot to learn from:\n\n- Papers (PDF)\n- Research notes (Markdown/Text)\n- Course materials\n- Project documentation\n- Any other relevant files\n\nAfter adding new files, run:\n```bash\npython build_knowledge.py\n```\n\nThis will update the knowledge base for the chatbot."
+    },
+    {
+      "id": "beccbcdeb0",
+      "source": "script.js",
+      "text": "// ===== Navbar scroll effect =====\nconst navbar = document.getElementById('navbar');\nwindow.addEventListener('scroll', () => {\n navbar.classList.toggle('scrolled', window.scrollY > 10);\n});\n\n// ===== Mobile nav toggle =====\nconst navToggle = document.getElementById('navToggle');\nconst navLinks = document.getElementById('navLinks');\n\nnavToggle.addEventListener('click', () => {\n navLinks.classList.toggle('open');\n navToggle.classList.toggle('active');\n});\n\n// Close mobile menu on link click\nnavLinks.querySelectorAll('a').forEach(link => {\n link.addEventListener('click', () => {\n navLinks.classList.remove('open');\n navToggle.classList.remove('active');\n });\n});\n\n// ===== Active nav link on scroll =====\nconst sections = document.querySelectorAll('section[id]');\nconst navItems = document.querySelectorAll('.nav-links a');"
+    },
+    {
+      "id": "73ff5b6ef1",
+      "source": "script.js",
+      "text": "tive nav link on scroll =====\nconst sections = document.querySelectorAll('section[id]');\nconst navItems = document.querySelectorAll('.nav-links a');\n\nfunction highlightNav() {\n const scrollPos = window.scrollY + 100;\n sections.forEach(section => {\n const top = section.offsetTop;\n const height = section.offsetHeight;\n const id = section.getAttribute('id');\n if (scrollPos >= top && scrollPos < top + height) {\n navItems.forEach(a => a.classList.remove('active'));\n const active = document.querySelector(`.nav-links a[href=\"#${id}\"]`);\n if (active) active.classList.add('active');\n }\n });\n}\n\nwindow.addEventListener('scroll', highlightNav);\nhighlightNav();\n\n// ===== Scroll animations =====\nconst observerOptions = {\n threshold: 0.1,\n rootMargin: '0px 0px -50px 0px'\n};"
+    },
+    {
+      "id": "8f4fe04519",
+      "source": "script.js",
+      "text": "ll', highlightNav);\nhighlightNav();\n\n// ===== Scroll animations =====\nconst observerOptions = {\n threshold: 0.1,\n rootMargin: '0px 0px -50px 0px'\n};\n\nconst observer = new IntersectionObserver((entries) => {\n entries.forEach(entry => {\n if (entry.isIntersecting) {\n entry.target.classList.add('animate-in');\n observer.unobserve(entry.target);\n }\n });\n}, observerOptions);\n\n// Observe elements for scroll animation\ndocument.querySelectorAll('.timeline-item, .project-card, .publication, .highlight-card, .teaching-card, .skill-category').forEach(el => {\n el.style.opacity = '0';\n observer.observe(el);\n});"
+    },
+    {
+      "id": "8237bd4165",
+      "source": "style.css",
+      "text": "/* ===== CSS Variables ===== */\n:root {\n --primary: #1a365d;\n --primary-light: #2c5282;\n --accent: #3182ce;\n --accent-light: #63b3ed;\n --bg: #ffffff;\n --bg-alt: #f7fafc;\n --text: #1a202c;\n --text-secondary: #4a5568;\n --text-light: #718096;\n --border: #e2e8f0;\n --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);\n --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);\n --shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);\n --radius: 8px;\n --radius-lg: 12px;\n --transition: 0.3s ease;\n --max-width: 1100px;\n}\n\n/* ===== Reset & Base ===== */\n*, *::before, *::after {\n margin: 0;\n padding: 0;\n box-sizing: border-box;\n}\n\nhtml {\n scroll-behavior: smooth;\n scroll-padding-top: 80px;\n}\n\nbody {\n font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n color: var(--text);\n background: var(--bg);\n line-height: 1.7;\n font-size: 16px;\n}"
+    },
+    {
+      "id": "471c8085e8",
+      "source": "style.css",
+      "text": "-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n color: var(--text);\n background: var(--bg);\n line-height: 1.7;\n font-size: 16px;\n}\n\na {\n color: var(--accent);\n text-decoration: none;\n transition: color var(--transition);\n}\n\na:hover {\n color: var(--primary);\n}\n\n/* ===== Navigation ===== */\n.navbar {\n position: fixed;\n top: 0;\n left: 0;\n right: 0;\n z-index: 1000;\n background: rgba(255, 255, 255, 0.95);\n backdrop-filter: blur(10px);\n border-bottom: 1px solid var(--border);\n transition: box-shadow var(--transition);\n}\n\n.navbar.scrolled {\n box-shadow: var(--shadow-md);\n}\n\n.nav-container {\n max-width: var(--max-width);\n margin: 0 auto;\n padding: 0 2rem;\n display: flex;\n align-items: center;\n justify-content: space-between;\n height: 64px;\n}"
+    },
+    {
+      "id": "cfd799251a",
+      "source": "style.css",
+      "text": "-width: var(--max-width);\n margin: 0 auto;\n padding: 0 2rem;\n display: flex;\n align-items: center;\n justify-content: space-between;\n height: 64px;\n}\n\n.nav-logo {\n font-family: 'Source Serif 4', Georgia, serif;\n font-size: 1.5rem;\n font-weight: 700;\n color: var(--primary);\n letter-spacing: -0.02em;\n}\n\n.nav-logo:hover {\n color: var(--accent);\n}\n\n.nav-links {\n display: flex;\n list-style: none;\n gap: 0.25rem;\n}\n\n.nav-links a {\n color: var(--text-secondary);\n font-size: 0.875rem;\n font-weight: 500;\n padding: 0.5rem 0.75rem;\n border-radius: 6px;\n transition: all var(--transition);\n}\n\n.nav-links a:hover,\n.nav-links a.active {\n color: var(--primary);\n background: var(--bg-alt);\n}\n\n.nav-toggle {\n display: none;\n flex-direction: column;\n gap: 5px;\n background: none;\n border: none;\n cursor: pointer;\n padding: 4px;\n}"
+    },
+    {
+      "id": "9747652f4b",
+      "source": "style.css",
+      "text": "--bg-alt);\n}\n\n.nav-toggle {\n display: none;\n flex-direction: column;\n gap: 5px;\n background: none;\n border: none;\n cursor: pointer;\n padding: 4px;\n}\n\n.nav-toggle span {\n display: block;\n width: 24px;\n height: 2px;\n background: var(--text);\n border-radius: 2px;\n transition: all var(--transition);\n}\n\n/* ===== Hero ===== */\n.hero {\n padding: 8rem 2rem 4rem;\n background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);\n min-height: 85vh;\n display: flex;\n align-items: center;\n}\n\n.hero-content {\n max-width: var(--max-width);\n margin: 0 auto;\n display: grid;\n grid-template-columns: 1fr auto;\n gap: 4rem;\n align-items: center;\n width: 100%;\n}\n\n.hero h1 {\n font-family: 'Source Serif 4', Georgia, serif;\n font-size: 3rem;\n font-weight: 700;\n color: var(--primary);\n line-height: 1.15;\n margin-bottom: 0.75rem;\n letter-spacing: -0.02em;\n}"
+    },
+    {
+      "id": "75c49e1581",
+      "source": "style.css",
+      "text": "eorgia, serif;\n font-size: 3rem;\n font-weight: 700;\n color: var(--primary);\n line-height: 1.15;\n margin-bottom: 0.75rem;\n letter-spacing: -0.02em;\n}\n\n.hero-subtitle {\n font-size: 1.2rem;\n color: var(--text-secondary);\n font-weight: 500;\n}\n\n.hero-affiliation {\n font-size: 1.05rem;\n color: var(--text-light);\n margin-bottom: 1.25rem;\n}\n\n.hero-research {\n font-size: 1.05rem;\n color: var(--text-secondary);\n line-height: 1.7;\n max-width: 560px;\n margin-bottom: 2rem;\n}\n\n.hero-links {\n display: flex;\n flex-wrap: wrap;\n gap: 0.75rem;\n}\n\n.btn {\n display: inline-flex;\n align-items: center;\n gap: 0.5rem;\n padding: 0.625rem 1.25rem;\n border-radius: var(--radius);\n font-size: 0.9rem;\n font-weight: 500;\n transition: all var(--transition);\n border: 2px solid transparent;\n}\n\n.btn-primary {\n background: var(--primary);\n color: white;\n border-color: var(--primary);\n}"
+    },
+    {
+      "id": "f097896cd0",
+      "source": "style.css",
+      "text": "ll var(--transition);\n border: 2px solid transparent;\n}\n\n.btn-primary {\n background: var(--primary);\n color: white;\n border-color: var(--primary);\n}\n\n.btn-primary:hover {\n background: var(--primary-light);\n border-color: var(--primary-light);\n color: white;\n transform: translateY(-1px);\n box-shadow: var(--shadow-md);\n}\n\n.btn-outline {\n background: white;\n color: var(--primary);\n border-color: var(--border);\n}\n\n.btn-outline:hover {\n border-color: var(--primary);\n color: var(--primary);\n transform: translateY(-1px);\n box-shadow: var(--shadow);\n}\n\n.hero-photo {\n width: 260px;\n height: 260px;\n border-radius: 50%;\n overflow: hidden;\n border: 4px solid white;\n box-shadow: var(--shadow-lg);\n flex-shrink: 0;\n}\n\n.hero-photo img {\n width: 100%;\n height: 100%;\n object-fit: cover;\n}"
+    },
+    {
+      "id": "d4d28c8426",
+      "source": "style.css",
+      "text": "n;\n border: 4px solid white;\n box-shadow: var(--shadow-lg);\n flex-shrink: 0;\n}\n\n.hero-photo img {\n width: 100%;\n height: 100%;\n object-fit: cover;\n}\n\n.photo-placeholder {\n width: 100%;\n height: 100%;\n background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);\n display: flex;\n flex-direction: column;\n align-items: center;\n justify-content: center;\n color: white;\n}\n\n.photo-placeholder i {\n font-size: 3rem;\n margin-bottom: 0.5rem;\n opacity: 0.8;\n}\n\n.photo-placeholder p {\n font-size: 0.75rem;\n text-align: center;\n opacity: 0.7;\n line-height: 1.4;\n}\n\n.photo-placeholder code {\n background: rgba(255,255,255,0.2);\n padding: 0.15em 0.4em;\n border-radius: 3px;\n font-size: 0.7rem;\n}\n\n/* ===== Sections ===== */\n.section {\n padding: 5rem 2rem;\n}\n\n.section-alt {\n background: var(--bg-alt);\n}\n\n.container {\n max-width: var(--max-width);\n margin: 0 auto;\n}"
+    },
+    {
+      "id": "7423591b38",
+      "source": "style.css",
+      "text": "== */\n.section {\n padding: 5rem 2rem;\n}\n\n.section-alt {\n background: var(--bg-alt);\n}\n\n.container {\n max-width: var(--max-width);\n margin: 0 auto;\n}\n\n.section-title {\n font-family: 'Source Serif 4', Georgia, serif;\n font-size: 2rem;\n font-weight: 700;\n color: var(--primary);\n margin-bottom: 2.5rem;\n letter-spacing: -0.01em;\n}\n\n.section-title::after {\n content: '';\n display: block;\n width: 50px;\n height: 3px;\n background: var(--accent);\n margin-top: 0.5rem;\n border-radius: 2px;\n}\n\n/* ===== About ===== */\n.about-content p {\n margin-bottom: 1rem;\n color: var(--text-secondary);\n font-size: 1.02rem;\n}\n\n.highlights {\n display: grid;\n grid-template-columns: repeat(3, 1fr);\n gap: 1.5rem;\n margin-top: 2.5rem;\n}"
+    },
+    {
+      "id": "39d620feda",
+      "source": "style.css",
+      "text": "-text-secondary);\n font-size: 1.02rem;\n}\n\n.highlights {\n display: grid;\n grid-template-columns: repeat(3, 1fr);\n gap: 1.5rem;\n margin-top: 2.5rem;\n}\n\n.highlight-card {\n background: white;\n padding: 1.75rem;\n border-radius: var(--radius-lg);\n box-shadow: var(--shadow);\n text-align: center;\n transition: transform var(--transition), box-shadow var(--transition);\n border: 1px solid var(--border);\n}\n\n.highlight-card:hover {\n transform: translateY(-3px);\n box-shadow: var(--shadow-md);\n}\n\n.highlight-card i {\n font-size: 2rem;\n color: var(--accent);\n margin-bottom: 0.75rem;\n}\n\n.highlight-card h3 {\n font-size: 1rem;\n font-weight: 600;\n margin-bottom: 0.75rem;\n color: var(--primary);\n}\n\n.highlight-card p {\n font-size: 0.875rem;\n color: var(--text-secondary);\n line-height: 1.8;\n}\n\n.date {\n font-size: 0.8rem;\n color: var(--text-light);\n font-style: italic;\n}"
+    },
+    {
+      "id": "28045e7d96",
+      "source": "style.css",
+      "text": "t-size: 0.875rem;\n color: var(--text-secondary);\n line-height: 1.8;\n}\n\n.date {\n font-size: 0.8rem;\n color: var(--text-light);\n font-style: italic;\n}\n\n/* ===== Publications ===== */\n.subsection-title {\n font-size: 1.1rem;\n font-weight: 600;\n color: var(--text);\n margin-bottom: 1.25rem;\n margin-top: 0.5rem;\n}\n\n.publication-list {\n margin-bottom: 2rem;\n}\n\n.publication {\n display: flex;\n gap: 1rem;\n padding: 1.25rem 0;\n border-bottom: 1px solid var(--border);\n}\n\n.publication:last-child {\n border-bottom: none;\n}\n\n.pub-marker {\n width: 8px;\n height: 8px;\n border-radius: 50%;\n background: var(--accent);\n margin-top: 0.55rem;\n flex-shrink: 0;\n}\n\n.pub-title {\n font-weight: 600;\n color: var(--text);\n font-size: 1.02rem;\n margin-bottom: 0.25rem;\n}\n\n.pub-authors {\n color: var(--text-secondary);\n font-size: 0.9rem;\n margin-bottom: 0.15rem;\n}"
+    },
+    {
+      "id": "a5ffe153d4",
+      "source": "style.css",
+      "text": "text);\n font-size: 1.02rem;\n margin-bottom: 0.25rem;\n}\n\n.pub-authors {\n color: var(--text-secondary);\n font-size: 0.9rem;\n margin-bottom: 0.15rem;\n}\n\n.pub-venue {\n color: var(--text-light);\n font-size: 0.875rem;\n margin-bottom: 0.35rem;\n}\n\n.pub-note {\n color: var(--accent);\n font-size: 0.85rem;\n font-weight: 500;\n margin-bottom: 0.5rem;\n}\n\n.pub-note i {\n margin-right: 0.25rem;\n}\n\n.pub-links {\n display: flex;\n gap: 0.75rem;\n}\n\n.pub-link {\n font-size: 0.825rem;\n font-weight: 500;\n color: var(--accent);\n padding: 0.25rem 0.6rem;\n border: 1px solid var(--accent);\n border-radius: 4px;\n transition: all var(--transition);\n}\n\n.pub-link:hover {\n background: var(--accent);\n color: white;\n}\n\n/* ===== Timeline ===== */\n.timeline {\n position: relative;\n padding-left: 2rem;\n}"
+    },
+    {
+      "id": "f19c4e9440",
+      "source": "style.css",
+      "text": ".pub-link:hover {\n background: var(--accent);\n color: white;\n}\n\n/* ===== Timeline ===== */\n.timeline {\n position: relative;\n padding-left: 2rem;\n}\n\n.timeline::before {\n content: '';\n position: absolute;\n left: 3px;\n top: 8px;\n bottom: 8px;\n width: 2px;\n background: var(--border);\n}\n\n.timeline-item {\n position: relative;\n padding-bottom: 2.5rem;\n}\n\n.timeline-item:last-child {\n padding-bottom: 0;\n}\n\n.timeline-marker {\n position: absolute;\n left: -2rem;\n top: 6px;\n width: 10px;\n height: 10px;\n border-radius: 50%;\n background: var(--accent);\n border: 2px solid white;\n box-shadow: 0 0 0 2px var(--accent);\n z-index: 1;\n}\n\n.timeline-content {\n background: white;\n border-radius: var(--radius-lg);\n padding: 1.5rem;\n box-shadow: var(--shadow);\n border: 1px solid var(--border);\n transition: box-shadow var(--transition);\n}\n\n.timeline-content:hover {\n box-shadow: var(--shadow-md);\n}"
+    },
+    {
+      "id": "e1128b0269",
+      "source": "style.css",
+      "text": "-shadow);\n border: 1px solid var(--border);\n transition: box-shadow var(--transition);\n}\n\n.timeline-content:hover {\n box-shadow: var(--shadow-md);\n}\n\n.timeline-header {\n display: flex;\n justify-content: space-between;\n align-items: flex-start;\n gap: 1rem;\n margin-bottom: 0.25rem;\n flex-wrap: wrap;\n}\n\n.timeline-header h3 {\n font-size: 1.1rem;\n font-weight: 600;\n color: var(--primary);\n}\n\n.timeline-date {\n font-size: 0.825rem;\n color: var(--text-light);\n font-weight: 500;\n white-space: nowrap;\n background: var(--bg-alt);\n padding: 0.2rem 0.6rem;\n border-radius: 4px;\n}\n\n.timeline-role {\n font-size: 0.9rem;\n color: var(--text-light);\n margin-bottom: 0.75rem;\n font-style: italic;\n}\n\n.timeline-content ul {\n list-style: none;\n padding: 0;\n}"
+    },
+    {
+      "id": "25954d28a3",
+      "source": "style.css",
+      "text": "t-size: 0.9rem;\n color: var(--text-light);\n margin-bottom: 0.75rem;\n font-style: italic;\n}\n\n.timeline-content ul {\n list-style: none;\n padding: 0;\n}\n\n.timeline-content li {\n position: relative;\n padding-left: 1.25rem;\n margin-bottom: 0.5rem;\n font-size: 0.9rem;\n color: var(--text-secondary);\n line-height: 1.65;\n}\n\n.timeline-content li::before {\n content: '▸';\n position: absolute;\n left: 0;\n color: var(--accent);\n font-weight: 600;\n}\n\n/* ===== Projects Grid ===== */\n.projects-grid {\n display: grid;\n grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\n gap: 1.5rem;\n}\n\n.project-card {\n background: white;\n border-radius: var(--radius-lg);\n padding: 1.75rem;\n box-shadow: var(--shadow);\n border: 1px solid var(--border);\n transition: transform var(--transition), box-shadow var(--transition);\n display: flex;\n flex-direction: column;\n}"
+    },
+    {
+      "id": "bb64572310",
+      "source": "style.css",
+      "text": "border: 1px solid var(--border);\n transition: transform var(--transition), box-shadow var(--transition);\n display: flex;\n flex-direction: column;\n}\n\n.project-card:hover {\n transform: translateY(-3px);\n box-shadow: var(--shadow-lg);\n}\n\n.project-icon {\n width: 44px;\n height: 44px;\n border-radius: 10px;\n background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);\n display: flex;\n align-items: center;\n justify-content: center;\n color: white;\n font-size: 1.1rem;\n margin-bottom: 1rem;\n}\n\n.project-card h3 {\n font-size: 1rem;\n font-weight: 600;\n color: var(--primary);\n margin-bottom: 0.25rem;\n}\n\n.project-course {\n font-size: 0.8rem;\n color: var(--text-light);\n margin-bottom: 0.75rem;\n font-style: italic;\n}\n\n.project-card > p:not(.project-course) {\n font-size: 0.875rem;\n color: var(--text-secondary);\n line-height: 1.65;\n flex: 1;\n}"
+    },
+    {
+      "id": "000689ce85",
+      "source": "style.css",
+      "text": "font-style: italic;\n}\n\n.project-card > p:not(.project-course) {\n font-size: 0.875rem;\n color: var(--text-secondary);\n line-height: 1.65;\n flex: 1;\n}\n\n.project-date {\n display: inline-block;\n font-size: 0.75rem;\n color: var(--text-light);\n margin-top: 1rem;\n font-weight: 500;\n background: var(--bg-alt);\n padding: 0.2rem 0.6rem;\n border-radius: 4px;\n}\n\n/* ===== Teaching ===== */\n.teaching-grid {\n display: grid;\n grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));\n gap: 1.5rem;\n}\n\n.teaching-card {\n background: white;\n border-radius: var(--radius-lg);\n padding: 2rem;\n box-shadow: var(--shadow);\n border: 1px solid var(--border);\n transition: box-shadow var(--transition);\n}\n\n.teaching-card:hover {\n box-shadow: var(--shadow-md);\n}\n\n.teaching-card i {\n font-size: 2rem;\n color: var(--accent);\n margin-bottom: 1rem;\n}"
+    },
+    {
+      "id": "f329ccb08f",
+      "source": "style.css",
+      "text": "on);\n}\n\n.teaching-card:hover {\n box-shadow: var(--shadow-md);\n}\n\n.teaching-card i {\n font-size: 2rem;\n color: var(--accent);\n margin-bottom: 1rem;\n}\n\n.teaching-card h3 {\n font-size: 1.05rem;\n font-weight: 600;\n color: var(--primary);\n margin-bottom: 0.5rem;\n}\n\n.teaching-card > p {\n font-size: 0.9rem;\n color: var(--text-secondary);\n}\n\n.teaching-detail {\n font-size: 0.825rem !important;\n color: var(--text-light) !important;\n margin-top: 0.5rem;\n font-weight: 500;\n}\n\n/* ===== Skills ===== */\n.skills-grid {\n display: grid;\n grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\n gap: 1.5rem;\n}\n\n.skill-category {\n background: white;\n border-radius: var(--radius-lg);\n padding: 1.75rem;\n box-shadow: var(--shadow);\n border: 1px solid var(--border);\n}\n\n.skill-category h3 {\n font-size: 1rem;\n font-weight: 600;\n color: var(--primary);\n margin-bottom: 1rem;\n}"
+    },
+    {
+      "id": "d3eaa373d3",
+      "source": "style.css",
+      "text": "dow);\n border: 1px solid var(--border);\n}\n\n.skill-category h3 {\n font-size: 1rem;\n font-weight: 600;\n color: var(--primary);\n margin-bottom: 1rem;\n}\n\n.skill-category h3 i {\n margin-right: 0.5rem;\n color: var(--accent);\n}\n\n.skill-tags {\n display: flex;\n flex-wrap: wrap;\n gap: 0.5rem;\n}\n\n.tag {\n background: var(--bg-alt);\n color: var(--text-secondary);\n padding: 0.35rem 0.75rem;\n border-radius: 20px;\n font-size: 0.825rem;\n font-weight: 500;\n border: 1px solid var(--border);\n transition: all var(--transition);\n}\n\n.tag:hover {\n background: var(--primary);\n color: white;\n border-color: var(--primary);\n}\n\n/* ===== Footer ===== */\n.footer {\n background: var(--primary);\n color: white;\n padding: 2rem;\n}\n\n.footer-content {\n max-width: var(--max-width);\n margin: 0 auto;\n display: flex;\n justify-content: space-between;\n align-items: center;\n}"
+    },
+    {
+      "id": "1d2de46192",
+      "source": "style.css",
+      "text": ": 2rem;\n}\n\n.footer-content {\n max-width: var(--max-width);\n margin: 0 auto;\n display: flex;\n justify-content: space-between;\n align-items: center;\n}\n\n.footer-content p {\n font-size: 0.875rem;\n opacity: 0.8;\n}\n\n.footer-links {\n display: flex;\n gap: 1.25rem;\n}\n\n.footer-links a {\n color: white;\n font-size: 1.2rem;\n opacity: 0.7;\n transition: opacity var(--transition);\n}\n\n.footer-links a:hover {\n opacity: 1;\n color: white;\n}\n\n/* ===== Responsive ===== */\n@media (max-width: 768px) {\n .nav-toggle {\n display: flex;\n }\n\n .nav-links {\n display: none;\n position: absolute;\n top: 64px;\n left: 0;\n right: 0;\n background: white;\n flex-direction: column;\n padding: 1rem 2rem;\n border-bottom: 1px solid var(--border);\n box-shadow: var(--shadow-md);\n }\n\n .nav-links.open {\n display: flex;\n }\n\n .hero {\n padding: 7rem 1.5rem 3rem;\n min-height: auto;\n }"
+    },
+    {
+      "id": "b71a3b7b82",
+      "source": "style.css",
+      "text": "var(--border);\n box-shadow: var(--shadow-md);\n }\n\n .nav-links.open {\n display: flex;\n }\n\n .hero {\n padding: 7rem 1.5rem 3rem;\n min-height: auto;\n }\n\n .hero-content {\n grid-template-columns: 1fr;\n gap: 2rem;\n text-align: center;\n }\n\n .hero-photo {\n width: 180px;\n height: 180px;\n margin: 0 auto;\n order: -1;\n }\n\n .hero h1 {\n font-size: 2.2rem;\n }\n\n .hero-research {\n max-width: 100%;\n }\n\n .hero-links {\n justify-content: center;\n }\n\n .highlights {\n grid-template-columns: 1fr;\n }\n\n .section {\n padding: 3.5rem 1.5rem;\n }\n\n .section-title {\n font-size: 1.7rem;\n }\n\n .projects-grid {\n grid-template-columns: 1fr;\n }\n\n .teaching-grid {\n grid-template-columns: 1fr;\n }\n\n .skills-grid {\n grid-template-columns: 1fr;\n }\n\n .timeline {\n padding-left: 1.5rem;\n }\n\n .timeline-header {\n flex-direction: column;\n gap: 0.25rem;\n }"
+    },
+    {
+      "id": "3470eaece8",
+      "source": "style.css",
+      "text": "kills-grid {\n grid-template-columns: 1fr;\n }\n\n .timeline {\n padding-left: 1.5rem;\n }\n\n .timeline-header {\n flex-direction: column;\n gap: 0.25rem;\n }\n\n .footer-content {\n flex-direction: column;\n gap: 1rem;\n text-align: center;\n }\n}\n\n@media (max-width: 480px) {\n .hero h1 {\n font-size: 1.8rem;\n }\n\n .hero-photo {\n width: 150px;\n height: 150px;\n }\n\n .btn {\n padding: 0.5rem 1rem;\n font-size: 0.825rem;\n }\n}\n\n/* ===== Animations ===== */\n@keyframes fadeInUp {\n from {\n opacity: 0;\n transform: translateY(20px);\n }\n to {\n opacity: 1;\n transform: translateY(0);\n }\n}\n\n.animate-in {\n animation: fadeInUp 0.6s ease forwards;\n}"
+    },
+    {
+      "id": "c97dab2430",
+      "source": "style.css",
+      "text": "ty: 0;\n transform: translateY(20px);\n }\n to {\n opacity: 1;\n transform: translateY(0);\n }\n}\n\n.animate-in {\n animation: fadeInUp 0.6s ease forwards;\n}\n\n/* ===== Chatbot Widget ===== */\n.chatbot-fab {\n position: fixed;\n bottom: 28px;\n right: 28px;\n width: 58px;\n height: 58px;\n border-radius: 50%;\n background: var(--accent);\n color: #fff;\n border: none;\n cursor: pointer;\n font-size: 1.4rem;\n box-shadow: 0 4px 16px rgba(49,130,206,0.35);\n z-index: 10000;\n transition: background var(--transition), transform 0.2s ease;\n display: flex;\n align-items: center;\n justify-content: center;\n}\n.chatbot-fab:hover {\n background: var(--primary-light);\n transform: scale(1.08);\n}\n.chatbot-fab.active {\n background: var(--primary);\n}"
+    },
+    {
+      "id": "193e36ddc5",
+      "source": "style.css",
+      "text": "t: center;\n}\n.chatbot-fab:hover {\n background: var(--primary-light);\n transform: scale(1.08);\n}\n.chatbot-fab.active {\n background: var(--primary);\n}\n\n.chatbot-window {\n position: fixed;\n bottom: 100px;\n right: 28px;\n width: 400px;\n max-width: calc(100vw - 32px);\n height: 540px;\n max-height: calc(100vh - 140px);\n background: var(--bg);\n border-radius: var(--radius-lg);\n box-shadow: 0 12px 40px rgba(0,0,0,0.18);\n z-index: 9999;\n display: flex;\n flex-direction: column;\n overflow: hidden;\n opacity: 0;\n transform: translateY(20px) scale(0.95);\n pointer-events: none;\n transition: opacity 0.25s ease, transform 0.25s ease;\n}\n.chatbot-window.open {\n opacity: 1;\n transform: translateY(0) scale(1);\n pointer-events: auto;\n}"
+    },
+    {
+      "id": "4ac59f7c6e",
+      "source": "style.css",
+      "text": "sition: opacity 0.25s ease, transform 0.25s ease;\n}\n.chatbot-window.open {\n opacity: 1;\n transform: translateY(0) scale(1);\n pointer-events: auto;\n}\n\n/* Header */\n.chatbot-header {\n background: var(--primary);\n color: #fff;\n padding: 16px 18px;\n display: flex;\n align-items: center;\n justify-content: space-between;\n flex-shrink: 0;\n}\n.chatbot-header-info {\n display: flex;\n align-items: center;\n gap: 12px;\n}\n.chatbot-avatar {\n width: 38px;\n height: 38px;\n border-radius: 50%;\n background: var(--accent);\n display: flex;\n align-items: center;\n justify-content: center;\n font-weight: 700;\n font-size: 0.85rem;\n letter-spacing: 0.5px;\n}\n.chatbot-header-title {\n font-weight: 600;\n font-size: 0.95rem;\n}\n.chatbot-header-subtitle {\n font-size: 0.75rem;\n opacity: 0.8;\n margin-top: 1px;\n}\n.chatbot-close {\n background: none;\n border: none;\n color: #fff;\n font-size: 1.1rem;\n cursor: pointer;"
+    },
+    {
+      "id": "2569c023ef",
+      "source": "style.css",
+      "text": "e: 0.75rem;\n opacity: 0.8;\n margin-top: 1px;\n}\n.chatbot-close {\n background: none;\n border: none;\n color: #fff;\n font-size: 1.1rem;\n cursor: pointer;\n opacity: 0.8;\n transition: opacity 0.2s;\n padding: 4px;\n}\n.chatbot-close:hover {\n opacity: 1;\n}\n\n/* Messages area */\n.chatbot-messages {\n flex: 1;\n overflow-y: auto;\n padding: 18px 16px;\n display: flex;\n flex-direction: column;\n gap: 10px;\n background: var(--bg-alt);\n}\n.chatbot-messages::-webkit-scrollbar {\n width: 5px;\n}\n.chatbot-messages::-webkit-scrollbar-thumb {\n background: var(--border);\n border-radius: 3px;\n}"
+    },
+    {
+      "id": "fc52d7c9b7",
+      "source": "style.css",
+      "text": "chatbot-messages::-webkit-scrollbar {\n width: 5px;\n}\n.chatbot-messages::-webkit-scrollbar-thumb {\n background: var(--border);\n border-radius: 3px;\n}\n\n/* Message bubbles */\n.chatbot-msg {\n max-width: 85%;\n padding: 10px 14px;\n border-radius: 16px;\n font-size: 0.88rem;\n line-height: 1.55;\n word-wrap: break-word;\n animation: chatFadeIn 0.2s ease;\n}\n.chatbot-msg-user {\n align-self: flex-end;\n background: var(--accent);\n color: #fff;\n border-bottom-right-radius: 4px;\n}\n.chatbot-msg-bot {\n align-self: flex-start;\n background: #fff;\n color: var(--text);\n border: 1px solid var(--border);\n border-bottom-left-radius: 4px;\n}\n.chatbot-msg-bot code {\n background: var(--bg-alt);\n padding: 1px 5px;\n border-radius: 4px;\n font-size: 0.82rem;\n}\n.chatbot-msg-bot pre {\n background: var(--bg-alt);\n padding: 8px 10px;\n border-radius: 6px;\n overflow-x: auto;\n margin: 6px 0;\n font-size: 0.8rem;\n}"
+    },
+    {
+      "id": "850330744f",
+      "source": "style.css",
+      "text": ".chatbot-msg-bot pre {\n background: var(--bg-alt);\n padding: 8px 10px;\n border-radius: 6px;\n overflow-x: auto;\n margin: 6px 0;\n font-size: 0.8rem;\n}\n.chatbot-msg-bot a {\n color: var(--accent);\n text-decoration: underline;\n}\n.chatbot-msg-error {\n border-color: #fc8181;\n background: #fff5f5;\n color: #c53030;\n}\n\n/* Typing indicator */\n.chatbot-typing {\n display: flex;\n gap: 5px;\n padding: 12px 18px;\n align-items: center;\n}\n.chatbot-typing span {\n width: 8px;\n height: 8px;\n border-radius: 50%;\n background: var(--text-light);\n animation: typingBounce 1.2s infinite;\n}\n.chatbot-typing span:nth-child(2) { animation-delay: 0.15s; }\n.chatbot-typing span:nth-child(3) { animation-delay: 0.3s; }\n\n@keyframes typingBounce {\n 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }\n 30% { transform: translateY(-6px); opacity: 1; }\n}"
+    },
+    {
+      "id": "bd8e5af2ca",
+      "source": "style.css",
+      "text": "y: 0.3s; }\n\n@keyframes typingBounce {\n 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }\n 30% { transform: translateY(-6px); opacity: 1; }\n}\n\n@keyframes chatFadeIn {\n from { opacity: 0; transform: translateY(6px); }\n to { opacity: 1; transform: translateY(0); }\n}\n\n/* Input area */\n.chatbot-input-area {\n display: flex;\n align-items: flex-end;\n gap: 8px;\n padding: 12px 14px;\n border-top: 1px solid var(--border);\n background: var(--bg);\n flex-shrink: 0;\n}\n.chatbot-input-area textarea {\n flex: 1;\n border: 1px solid var(--border);\n border-radius: 20px;\n padding: 10px 16px;\n font-size: 0.88rem;\n font-family: inherit;\n resize: none;\n outline: none;\n max-height: 120px;\n line-height: 1.4;\n transition: border-color 0.2s;\n}\n.chatbot-input-area textarea:focus {\n border-color: var(--accent);\n}\n.chatbot-input-area button {\n width: 40px;\n height: 40px;\n border-radius: 50%;"
+    },
+    {
+      "id": "3546273b8c",
+      "source": "style.css",
+      "text": "}\n.chatbot-input-area textarea:focus {\n border-color: var(--accent);\n}\n.chatbot-input-area button {\n width: 40px;\n height: 40px;\n border-radius: 50%;\n background: var(--accent);\n color: #fff;\n border: none;\n cursor: pointer;\n font-size: 0.9rem;\n flex-shrink: 0;\n transition: background 0.2s;\n display: flex;\n align-items: center;\n justify-content: center;\n}\n.chatbot-input-area button:hover {\n background: var(--primary-light);\n}"
+    },
+    {
+      "id": "5d809548fd",
+      "source": "style.css",
+      "text": "ound 0.2s;\n display: flex;\n align-items: center;\n justify-content: center;\n}\n.chatbot-input-area button:hover {\n background: var(--primary-light);\n}\n\n/* API key prompt */\n.chatbot-api-key-prompt {\n text-align: center;\n padding: 24px 16px;\n}\n.chatbot-api-key-prompt p {\n font-size: 0.85rem;\n color: var(--text-secondary);\n margin-bottom: 12px;\n line-height: 1.5;\n}\n.chatbot-api-key-prompt a {\n color: var(--accent);\n text-decoration: underline;\n}\n.chatbot-api-input-row {\n display: flex;\n gap: 8px;\n}\n.chatbot-api-input-row input {\n flex: 1;\n padding: 10px 14px;\n border: 1px solid var(--border);\n border-radius: 8px;\n font-size: 0.85rem;\n outline: none;\n font-family: inherit;\n}\n.chatbot-api-input-row input:focus {\n border-color: var(--accent);\n}\n.chatbot-api-input-row button {\n padding: 10px 20px;\n background: var(--accent);\n color: #fff;\n border: none;\n border-radius: 8px;\n font-size: 0.85rem;"
+    },
+    {
+      "id": "4dce048a6e",
+      "source": "style.css",
+      "text": "hatbot-api-input-row button {\n padding: 10px 20px;\n background: var(--accent);\n color: #fff;\n border: none;\n border-radius: 8px;\n font-size: 0.85rem;\n font-weight: 600;\n cursor: pointer;\n transition: background 0.2s;\n}\n.chatbot-api-input-row button:hover {\n background: var(--primary-light);\n}\n.chatbot-api-note {\n font-size: 0.72rem !important;\n color: var(--text-light) !important;\n margin-top: 10px !important;\n margin-bottom: 0 !important;\n}\n\n/* Mobile responsiveness */\n@media (max-width: 480px) {\n .chatbot-window {\n bottom: 0;\n right: 0;\n width: 100vw;\n height: 100vh;\n max-height: 100vh;\n border-radius: 0;\n }\n .chatbot-fab {\n bottom: 18px;\n right: 18px;\n }\n}"
+    }
+  ]
+}
