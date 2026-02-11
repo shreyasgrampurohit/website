@@ -3,5 +3,5 @@
 
 const CONFIG = {
     // Replace with your Cloudflare Worker URL after deployment
-    PROXY_URL: 'website-gemini-proxy.shreyasg0512.workers.dev',
+    PROXY_URL: 'https://website-gemini-proxy.shreyasg0512.workers.dev',
 };
