@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyas Grampurohit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="nav-logo">SG</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Shreyas Grampurohit</h1>
+            <p class="hero-subtitle">B.Tech. &amp; M.Tech. in Electrical Engineering</p>
+            <p class="hero-affiliation">Indian Institute of Technology Bombay</p>
+            <p class="hero-research">Research at the intersection of <strong>deep learning</strong>, <strong>signal processing</strong>, and <strong>computer architecture</strong></p>
+            <div class="hero-links">
+                <a href="mailto:shreyasgrampurohit@iitb.ac.in" class="btn btn-primary"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com/shreyasgrampurohit" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/shreyasgrampurohit" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="CV PhD NUS.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-file-pdf"></i> CV</a>
+            </div>
+        </div>
+        <div class="hero-photo">
+            <div class="photo-placeholder">
+                <i class="fas fa-user"></i>
+                <p>Add your photo as<br><code>photo.jpg</code></p>
+            </div>
+            <!-- Replace the div above with: <img src="photo.jpg" alt="Shreyas Grampurohit"> -->
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>
+                I am a final-year Dual Degree (B.Tech. + M.Tech.) student in the
+                <strong>Department of Electrical Engineering</strong> at
+                <strong>IIT Bombay</strong>, specializing in Communication and Signal Processing
+                with a minor in Computer Science and Engineering.
+            </p>
+            <p>
+                My research interests lie at the intersection of <strong>deep learning and signal processing</strong>,
+                including learning-based inverse problems, compressive sensing, and interpretable recovery,
+                as well as <strong>ML for systems and computer architecture</strong>.
+            </p>
+            <p>
+                I have had the privilege of collaborating with
+                <a href="https://www.cse.iitb.ac.in/~ajitvr/" target="_blank">Prof. Ajit Rajwade</a> and
+                <a href="https://sites.google.com/view/satishmulleti" target="_blank">Prof. Satish Mulleti</a> at IIT Bombay,
+                and <a href="https://scholar.harvard.edu/vijay-janapa-reddi" target="_blank">Prof. Vijay Janapa Reddi</a>
+                at the Edge Computing Lab, Harvard University.
+            </p>
+
+            <div class="highlights">
+                <div class="highlight-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                    <p><strong>IIT Bombay</strong><br>
+                    B.Tech. &amp; M.Tech. in EE<br>
+                    Minor in CS&amp;E<br>
+                    CPI: 8.99/10<br>
+                    <span class="date">Nov 2021 — Jun 2026</span></p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Honors</h3>
+                    <p>Best of CAL at HPCA 2026<br>
+                    Best Poster at RISC 2025<br>
+                    KVPY Fellow (AIR 198)<br>
+                    JEE Advanced AIR 495</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Interests</h3>
+                    <p>Inverse Problems<br>
+                    Compressive Sensing<br>
+                    Interpretable Recovery<br>
+                    ML for Architecture</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Publications Section -->
+<section class="section section-alt" id="publications">
+    <div class="container">
+        <h2 class="section-title">Publications</h2>
+
+        <h3 class="subsection-title">Accepted / Published</h3>
+        <div class="publication-list">
+            <div class="publication">
+                <div class="pub-marker"></div>
+                <div class="pub-content">
+                    <p class="pub-title">QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture</p>
+                    <p class="pub-authors">Shvetank Prakash, Andrew Cheng, Jason Yik, Arya Tschand, Radhika Ghosal, Ikechukwu Uchendu, Jessica Quaye, Jeffrey Ma, Shreyas Grampurohit, Sofia Giannuzzi, Arnav Balyan, Fin Amin, Aadya Pipersenia, Yash Choudhary, Ankita Nayak, Amir Yazdanbakhsh, Vijay Janapa Reddi</p>
+                    <p class="pub-venue"><em>IEEE Computer Architecture Letters (CAL)</em>, 2025</p>
+                    <p class="pub-note"><i class="fas fa-award"></i> Selected for the Best of CAL session at HPCA 2026 (one of 3 papers from 90+)</p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="pub-marker"></div>
+                <div class="pub-content">
+                    <p class="pub-title">Two-Dimensional Tomographic Reconstruction From Projections With Unknown Angles and Unknown Spatial Shifts</p>
+                    <p class="pub-authors">SJ Grampurohit, S Mulleti, A Rajwade</p>
+                    <p class="pub-venue"><em>IEEE ICASSP 2026</em></p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="subsection-title">Preprints / Under Review</h3>
+        <div class="publication-list">
+            <div class="publication">
+                <div class="pub-marker"></div>
+                <div class="pub-content">
+                    <p class="pub-title">Verifiable Deep Quantitative Group Testing</p>
+                    <p class="pub-authors">SJ Grampurohit, S Mulleti, A Rajwade</p>
+                    <p class="pub-venue">Preprint, 2025</p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Research Section -->
+<section class="section" id="research">
+    <div class="container">
+        <h2 class="section-title">Research Experience</h2>
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Deep Learning for Group Testing</h3>
+                        <span class="timeline-date">Apr 2025 — Present</span>
+                    </div>
+                    <p class="timeline-role">Dual Degree Thesis | Guide: Prof. Ajit Rajwade &amp; Prof. Satish Mulleti</p>
+                    <ul>
+                        <li>Designed a noise-robust Deep Learning solver for Quantitative Group Testing, achieving reconstruction performance matching state-of-the-art combinatorial algorithms</li>
+                        <li>Established structural verifiability by introducing novel Jacobian analysis, showcasing that the network implicitly internalizes the combinatorial structure of the problem</li>
+                        <li>Demonstrated superior signal recovery resilience in regimes with sparse measurement noise compared to model-based solvers like Approximate Message Passing</li>
+                        <li>Extending the framework to real-valued signal recovery for applications like viral load estimation with rigorous theoretical guarantees</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Archipedia: Generative AI for Hardware Design</h3>
+                        <span class="timeline-date">Jan 2024 — Present</span>
+                    </div>
+                    <p class="timeline-role">In-semester Research | Guide: Prof. Vijay Janapa Reddi, Harvard University</p>
+                    <ul>
+                        <li>Spearheaded "Archipedia," a one-billion-token dataset covering 50 years of premier computer architecture research, leading a team of 10 students</li>
+                        <li>Co-authored QuArch benchmark for evaluating LLMs in computer architecture; paper accepted to IEEE CAL and selected for 'Best of CAL' at HPCA 2026</li>
+                        <li>Architected metadata extraction and validation pipelines on AWS to parse thousands of academic manuscripts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Tomography Under Unknown Angles and Spatial Shifts</h3>
+                        <span class="timeline-date">Aug 2024 — Mar 2025</span>
+                    </div>
+                    <p class="timeline-role">Research Project | Guide: Prof. Ajit Rajwade &amp; Prof. Satish Mulleti</p>
+                    <ul>
+                        <li>Developed a robust reconstruction framework for Cryo-EM Tomography addressing the ill-posed inverse problem of recovering 2D images from corrupted projections</li>
+                        <li>Formulated a three-way alternating minimization algorithm with shift-aware modified Graph Laplacian initialization</li>
+                        <li>Proved theoretical non-feasibility of spectral invariant estimators for arbitrary translational shifts</li>
+                        <li>Achieved 2.36× lower RRMSE compared to baselines; Best Poster Award at RISC 2025</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>ArchGym: ML-Assisted Architecture Design</h3>
+                        <span class="timeline-date">Jun 2023 — Aug 2023</span>
+                    </div>
+                    <p class="timeline-role">Research Internship | Guide: Prof. Vijay Janapa Reddi, Harvard University</p>
+                    <ul>
+                        <li>Contributed to ArchGym, an open-source framework connecting diverse ML algorithms to architecture simulators</li>
+                        <li>Developed ML-based proxy models to mitigate simulator latency, optimizing the accuracy-speed trade-off</li>
+                        <li>Led automated documentation generation and authored comprehensive guides for research reproducibility</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Professional Experience -->
+<section class="section section-alt" id="experience">
+    <div class="container">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Digital Electronics Intern — Texas Instruments</h3>
+                        <span class="timeline-date">May 2024 — Jul 2024</span>
+                    </div>
+                    <p class="timeline-role">Radar Business Unit | Bengaluru, India</p>
+                    <ul>
+                        <li>Conducted comprehensive performance benchmarking of radar chip architectures using Coremark and Dhrystone suites</li>
+                        <li>Analyzed cache utilization metrics on a QuickTurn emulator, implementing modifications to cache interactions</li>
+                        <li>Extracted key performance metrics enabling projected 30% reduction in power and 40% lower area utilization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section" id="projects">
+    <div class="container">
+        <h2 class="section-title">Academic Projects</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-microscope"></i></div>
+                <h3>Neutrophil Image Generation with Human Feedback</h3>
+                <p class="project-course">ML in Healthcare | Prof. Kshitij Jadhav</p>
+                <p>Trained diffusion model for synthetic histopathology images. Designed multi-label reward model from expert pathologist feedback, improving plausibility from 82% to 90%.</p>
+                <span class="project-date">Jan — May 2024</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-microchip"></i></div>
+                <h3>Embedded DSP System Design</h3>
+                <p class="project-course">DSP Lab | Prof. Preeti Rao</p>
+                <p>Optimized real-time FIR & IIR filters on TI ezDSP5515. Accelerated spectrum analysis with DMA ping-pong buffers and developed DTMF decoder with GNU Radio.</p>
+                <span class="project-date">Jan — Apr 2025</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-robot"></i></div>
+                <h3>Reinforcement Learning & MDPs</h3>
+                <p class="project-course">FILA | Prof. Shivaram Kalyanakrishnan</p>
+                <p>Implemented UCB, KL-UCB, Thompson Sampling on bandits. Built MDP planner and designed RL agent with CMA-ES for autonomous driving.</p>
+                <span class="project-date">Jan — Apr 2025</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-image"></i></div>
+                <h3>Denoising Diffusion Probabilistic Models</h3>
+                <p class="project-course">Advanced ML | Prof. Amit Sethi</p>
+                <p>Implemented DDPM with custom U-Net architecture. Explored noise scheduling strategies and extended to color image generation in HSV space.</p>
+                <span class="project-date">Aug — Nov 2023</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-memory"></i></div>
+                <h3>Energy-efficient Spatial Data Prefetcher</h3>
+                <p class="project-course">Advanced Architecture | Prof. Biswabandan Panda</p>
+                <p>Improved energy-efficiency of Bingo Spatial Data Prefetcher achieving 90% accuracy while maintaining speedup. Evaluated using ChampSim simulator.</p>
+                <span class="project-date">Aug — Nov 2024</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Parallel Retinal Neuron Network Simulation</h3>
+                <p class="project-course">HPC | Prof. Shivasubramanian Gopalakrishnan</p>
+                <p>Accelerated neuron network simulations with OpenMP, achieving 4.6× speedup. Scaled to 1000+ computational units with detailed profiling.</p>
+                <span class="project-date">Aug — Nov 2024</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-circuit-board"></i></div>
+                <h3>FPGA-based RRAM Characterization</h3>
+                <p class="project-course">Electronic Design Lab | Prof. Siddharth Tallur</p>
+                <p>Led analog frontend design for FPGA-based RRAM system. Developed Python GUI for real-time control and data acquisition, achieving &lt;5% error.</p>
+                <span class="project-date">Jan — May 2024</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-eye"></i></div>
+                <h3>Stereo Vision & Shape from Shading</h3>
+                <p class="project-course">Computer Vision | Prof. Subhasis Chaudhuri</p>
+                <p>Implemented stereo vision algorithms on Middlebury dataset. Developed shape-from-shading for 3D geometry reconstruction under varying conditions.</p>
+                <span class="project-date">Jan — Apr 2025</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Teaching Section -->
+<section class="section section-alt" id="teaching">
+    <div class="container">
+        <h2 class="section-title">Teaching &amp; Mentorship</h2>
+        <div class="teaching-grid">
+            <div class="teaching-card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Teaching Assistant — Signal Processing</h3>
+                <p>Prof. Preeti Rao, Dept. of Electrical Engineering, IIT Bombay</p>
+                <p class="teaching-detail">100+ students | Aug — Nov 2025</p>
+            </div>
+            <div class="teaching-card">
+                <i class="fas fa-users"></i>
+                <h3>Summer of Science Mentor — Image Processing</h3>
+                <p>Maths and Physics Club, IIT Bombay</p>
+                <p class="teaching-detail">Designed curriculum and guided 7 students | May — Jul 2025</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="section" id="skills">
+    <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Languages & Tools</h3>
+                <div class="skill-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">C</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">MATLAB</span>
+                    <span class="tag">VHDL</span>
+                    <span class="tag">Assembly</span>
+                    <span class="tag">GNURadio</span>
+                    <span class="tag">Quartus Prime</span>
+                    <span class="tag">Keil µVision</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-layer-group"></i> Libraries</h3>
+                <div class="skill-tags">
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">NumPy</span>
+                    <span class="tag">Scikit-Learn</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Matplotlib</span>
+                    <span class="tag">SciPy</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">Selenium</span>
+                    <span class="tag">OpenAI Gym</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-server"></i> Infrastructure & HPC</h3>
+                <div class="skill-tags">
+                    <span class="tag">OpenMP</span>
+                    <span class="tag">MPI</span>
+                    <span class="tag">CUDA C</span>
+                    <span class="tag">LaTeX</span>
+                    <span class="tag">NgSPICE</span>
+                    <span class="tag">Google Cloud Platform</span>
+                    <span class="tag">AWS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2026 Shreyas Grampurohit</p>
+            <div class="footer-links">
+                <a href="mailto:shreyasgrampurohit@iitb.ac.in"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/shreyasgrampurohit" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/shreyasgrampurohit" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
