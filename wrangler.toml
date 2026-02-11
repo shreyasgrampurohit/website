@@ -1,0 +1,9 @@
+name = "gemini-proxy"
+main = "cloudflare-worker.js"
+compatibility_date = "2024-01-01"
+
+# No routes needed - this will be a standalone worker
+# Access via: https://gemini-proxy.YOUR-SUBDOMAIN.workers.dev
+
+[env.production]
+name = "gemini-proxy"
