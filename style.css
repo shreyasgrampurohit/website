@@ -258,7 +258,7 @@ a:hover {
 }
 
 .btn-outline {
-    background: white;
+    background: var(--bg);
     color: var(--primary);
     border-color: var(--border);
 }
@@ -365,7 +365,7 @@ a:hover {
 }
 
 .highlight-card {
-    background: white;
+    background: var(--bg);
     padding: 1.75rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
@@ -633,7 +633,7 @@ a:hover {
 }
 
 .timeline-content {
-    background: white;
+    background: var(--bg);
     border-radius: var(--radius-lg);
     padding: 1.5rem;
     box-shadow: var(--shadow);
@@ -707,7 +707,7 @@ a:hover {
 }
 
 .project-card {
-    background: white;
+    background: var(--bg);
     border-radius: var(--radius-lg);
     padding: 1.75rem;
     box-shadow: var(--shadow);
@@ -775,7 +775,7 @@ a:hover {
 }
 
 .teaching-card {
-    background: white;
+    background: var(--bg);
     border-radius: var(--radius-lg);
     padding: 2rem;
     box-shadow: var(--shadow);
@@ -820,7 +820,7 @@ a:hover {
 }
 
 .skill-category {
-    background: white;
+    background: var(--bg);
     border-radius: var(--radius-lg);
     padding: 1.75rem;
     box-shadow: var(--shadow);
@@ -1379,7 +1379,7 @@ a:hover {
 }
 .chatbot-msg-bot {
     align-self: flex-start;
-    background: #fff;
+    background: var(--bg);
     color: var(--text);
     border: 1px solid var(--border);
     border-bottom-left-radius: 4px;
