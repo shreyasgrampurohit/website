@@ -264,17 +264,29 @@ function getSnippet(content, query) {
 }
 
 // ===== Google Scholar Citation Stats =====
-// Note: Direct API access is not available. This is a placeholder.
-// For production, use a backend proxy or manual update.
+// Fetches citation stats from Cloudflare Worker
+// Worker scrapes Google Scholar profile
 async function loadCitationStats() {
-    // Placeholder values - update these manually or use a backend service
-    const stats = {
-        citations: '245',  // Update with your actual citation count
-        hIndex: '8'        // Update with your actual h-index
-    };
-    
-    document.getElementById('total-citations').textContent = stats.citations;
-    document.getElementById('h-index').textContent = stats.hIndex;
+    try {
+        // TODO: Replace with your deployed worker URL
+        const SCHOLAR_WORKER_URL = 'https://scholar-stats.YOUR_SUBDOMAIN.workers.dev';
+        
+        const response = await fetch(SCHOLAR_WORKER_URL);
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch stats');
+        }
+        
+        const stats = await response.json();
+        
+        document.getElementById('total-citations').textContent = stats.citations || '—';
+        document.getElementById('h-index').textContent = stats.hIndex || '—';
+    } catch (error) {
+        console.warn('Could not load citation stats:', error);
+        // Fallback to showing placeholder
+        document.getElementById('total-citations').textContent = '—';
+        document.getElementById('h-index').textContent = '—';
+    }
 }
 
 // Load stats on page load
