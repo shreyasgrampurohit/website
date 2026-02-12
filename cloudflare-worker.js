@@ -29,11 +29,13 @@ const CORS_HEADERS = {
     'Access-Control-Allow-Headers': 'Content-Type',
 };
 
-addEventListener('fetch', event => {
-    event.respondWith(handleRequest(event.request));
-});
+export default {
+    async fetch(request, env) {
+        return handleRequest(request, env);
+    }
+};
 
-async function handleRequest(request) {
+async function handleRequest(request, env) {
     // Handle CORS preflight
     if (request.method === 'OPTIONS') {
         return new Response(null, { 
@@ -65,7 +67,7 @@ async function handleRequest(request) {
         const errors = [];
 
         // Provider order: Claude -> OpenAI -> Gemini
-        const claudeKey = typeof CLAUDE_API_KEY !== 'undefined' ? CLAUDE_API_KEY : null;
+        const claudeKey = env?.CLAUDE_API_KEY || null;
         if (claudeKey) {
             const res = await callClaude(messages, systemPrompt, claudeKey, body?.generationConfig);
             if (res.ok) return respondJSON(res.data);
@@ -74,7 +76,7 @@ async function handleRequest(request) {
             errors.push({ provider: 'claude', error: 'CLAUDE_API_KEY not set' });
         }
 
-        const openaiKey = typeof OPENAI_API_KEY !== 'undefined' ? OPENAI_API_KEY : null;
+        const openaiKey = env?.OPENAI_API_KEY || null;
         if (openaiKey) {
             const res = await callOpenAI(messages, systemPrompt, openaiKey, body?.generationConfig);
             if (res.ok) return respondJSON(res.data);
@@ -83,7 +85,7 @@ async function handleRequest(request) {
             errors.push({ provider: 'openai', error: 'OPENAI_API_KEY not set' });
         }
 
-        const geminiKey = typeof GEMINI_API_KEY !== 'undefined' ? GEMINI_API_KEY : null;
+        const geminiKey = env?.GEMINI_API_KEY || null;
         if (geminiKey) {
             const res = await callGemini(body, geminiKey);
             if (res.ok) return respondJSON(res.data);
