@@ -1,7 +1,7 @@
-// Cloudflare Worker to fetch Google Scholar stats
+// Cloudflare Worker to fetch Google Scholar stats using SerpApi
 // Deploy this separately as a new worker
 
-const SCHOLAR_URL = 'https://scholar.google.com/citations?user=zMlAm6gAAAAJ&hl=en&authuser=1';
+const SCHOLAR_USER_ID = 'zMlAm6gAAAAJ'; // Your Google Scholar user ID
 const CACHE_DURATION = 86400; // 24 hours in seconds
 
 const CORS_HEADERS = {
@@ -28,6 +28,17 @@ export default {
             });
         }
 
+        // Check for API key
+        if (!env.SERPAPI_KEY) {
+            return new Response(JSON.stringify({
+                error: 'Configuration error',
+                message: 'SERPAPI_KEY not configured'
+            }), {
+                status: 500,
+                headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' }
+            });
+        }
+
         try {
             // Check cache first
             const cache = caches.default;
@@ -35,34 +46,22 @@ export default {
             let response = await cache.match(cacheKey);
 
             if (!response) {
-                // Fetch from Google Scholar
-                const scholarResponse = await fetch(SCHOLAR_URL, {
-                    headers: {
-                        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
-                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-                        'Accept-Language': 'en-US,en;q=0.9',
-                        'Accept-Encoding': 'gzip, deflate, br',
-                        'Referer': 'https://scholar.google.com/',
-                        'DNT': '1',
-                        'Connection': 'keep-alive',
-                        'Upgrade-Insecure-Requests': '1',
-                        'Sec-Fetch-Dest': 'document',
-                        'Sec-Fetch-Mode': 'navigate',
-                        'Sec-Fetch-Site': 'same-origin',
-                        'Sec-Ch-Ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
-                        'Sec-Ch-Ua-Mobile': '?0',
-                        'Sec-Ch-Ua-Platform': '"macOS"',
-                    }
-                });
+                // Fetch from SerpApi
+                const serpApiUrl = `https://serpapi.com/search.json?engine=google_scholar_author&author_id=${SCHOLAR_USER_ID}&api_key=${env.SERPAPI_KEY}`;
+                
+                const serpResponse = await fetch(serpApiUrl);
 
-                if (!scholarResponse.ok) {
-                    throw new Error(`Failed to fetch Scholar page: ${scholarResponse.status}`);
+                if (!serpResponse.ok) {
+                    throw new Error(`SerpApi request failed: ${serpResponse.status}`);
                 }
 
-                const html = await scholarResponse.text();
+                const data = await serpResponse.json();
 
-                // Parse citations and h-index from HTML
-                const stats = parseScholarStats(html);
+                // Extract stats from SerpApi response
+                const stats = {
+                    citations: data.cited_by?.table?.[0]?.citations?.all || 0,
+                    hIndex: data.cited_by?.table?.[0]?.h_index?.all || 0
+                };
 
                 response = new Response(JSON.stringify(stats), {
                     status: 200,
@@ -89,35 +88,4 @@ export default {
             });
         }
     }
-};
-
-function parseScholarStats(html) {
-    const stats = {
-        citations: 0,
-        hIndex: 0
-    };
-
-    try {
-        // Match citations count
-        // Pattern: <td class="gsc_rsb_std">123</td> (first occurrence)
-        const citationsMatch = html.match(/<td class="gsc_rsb_std">(\d+)<\/td>/);
-        if (citationsMatch) {
-            stats.citations = parseInt(citationsMatch[1], 10);
-        }
-
-        // Match h-index
-        // Pattern: Look for the second gsc_rsb_std after "All" row
-        const allMatches = html.match(/<td class="gsc_rsb_std">(\d+)<\/td>/g);
-        if (allMatches && allMatches.length >= 3) {
-            // Third value is usually h-index (citations, citations since 2020, h-index)
-            const hIndexMatch = allMatches[2].match(/(\d+)/);
-            if (hIndexMatch) {
-                stats.hIndex = parseInt(hIndexMatch[1], 10);
-            }
-        }
-    } catch (error) {
-        console.error('Error parsing Scholar stats:', error);
-    }
-
-    return stats;
 }

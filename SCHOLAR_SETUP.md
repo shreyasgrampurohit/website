@@ -1,96 +1,112 @@
-# Google Scholar Stats Setup
+# Google Scholar Stats Setup (Using SerpApi)
 
-This guide explains how to set up automatic fetching of your Google Scholar citation statistics.
+This guide explains how to set up automatic Google Scholar citation statistics fetching for your website using SerpApi.
+
+## Overview
+
+The `scholar-worker.js` Cloudflare Worker uses SerpApi to fetch your Google Scholar citation count and h-index. SerpApi handles all the complexity of scraping Google Scholar reliably.
 
 ## Prerequisites
 
-- Cloudflare account
-- Your Google Scholar profile ID
-- Wrangler CLI installed (or use Cloudflare Dashboard)
+1. A Cloudflare account (free tier works)
+2. A SerpApi account with API key (free tier: 100 searches/month)
 
-## Step 1: Find Your Google Scholar ID
+## Setup Steps
 
-1. Go to your Google Scholar profile
-2. Look at the URL: `https://scholar.google.com/citations?user=XXXXXXXXXX&hl=en`
-3. Copy the value after `user=` (the XXXXXXXXXX part)
+### 1. Get Your SerpApi API Key
 
-## Step 2: Update the Worker Code
+1. Go to [serpapi.com](https://serpapi.com/)
+2. Sign up for a free account
+3. Go to your dashboard and copy your API key
+4. Free tier gives you 100 searches/month (perfect since we cache for 24 hours)
 
-1. Open `scholar-worker.js`
-2. Replace `YOUR_SCHOLAR_ID` on line 4 with your actual Scholar ID:
-   ```javascript
-   const SCHOLAR_URL = 'https://scholar.google.com/citations?user=YOUR_ACTUAL_ID&hl=en';
-   ```
+### 2. Configure the Worker
 
-## Step 3: Deploy the Worker
+The worker is already configured with your Scholar ID (`zMlAm6gAAAAJ`). If you need to change it, edit line 4 in `scholar-worker.js`.
 
-### Option A: Using Wrangler CLI
+### 3. Deploy the Worker
+
+#### Option A: Using Cloudflare Dashboard (Easiest)
+
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/)
+2. Navigate to **Workers & Pages**
+3. Click **Create Application** → **Create Worker**
+4. Name it `scholar-stats` and click **Deploy**
+5. Click **Edit Code**
+6. Copy and paste the entire content of `scholar-worker.js`
+7. Click **Save and Deploy**
+8. Go to **Settings** → **Variables**
+9. Click **Add variable**:
+   - Variable name: `SERPAPI_KEY`
+   - Value: Your SerpApi API key
+   - Type: Secret (encrypted)
+10. Click **Save**
+
+#### Option B: Using Wrangler CLI
 
 ```bash
 # Deploy the worker
 npx wrangler deploy scholar-worker.js --config wrangler-scholar.toml
 
-# Note the deployed URL (something like https://scholar-stats.YOUR_SUBDOMAIN.workers.dev)
+# Add your SerpApi key as a secret
+npx wrangler secret put SERPAPI_KEY --config wrangler-scholar.toml
+# When prompted, paste your SerpApi API key
 ```
 
-### Option B: Using Cloudflare Dashboard
+### 4. Update Your Frontend
 
-1. Go to Cloudflare Dashboard → Workers & Pages
-2. Click "Create Application" → "Create Worker"
-3. Name it "scholar-stats"
-4. Copy the content of `scholar-worker.js` into the editor
-5. Update line 4 with your Scholar ID
-6. Click "Save and Deploy"
-7. Copy the worker URL
+The frontend (`script.js`) should already be configured to use:
+```
+https://scholar-stats.shreyasg0512.workers.dev
+```
 
-## Step 4: Update Frontend
+If you named your worker differently, update line 272 in `script.js`.
 
-1. Open `script.js`
-2. Find line ~272 where it says `SCHOLAR_WORKER_URL`
-3. Replace with your actual worker URL:
-   ```javascript
-   const SCHOLAR_WORKER_URL = 'https://scholar-stats.YOUR_SUBDOMAIN.workers.dev';
-   ```
+### 5. Test It
 
-## Step 5: Test
+Visit your website and check if the citation stats load. You can also test the worker directly:
+```
+https://scholar-stats.shreyasg0512.workers.dev
+```
 
-1. Commit and push all changes
-2. Wait for GitHub Pages to rebuild
-3. Visit your website and check the citations/h-index display
+You should see:
+```json
+{"citations":123,"hIndex":4}
+```
 
-## Caching
+## How It Works
 
-- The worker caches results for 24 hours
-- This prevents hitting Google Scholar too frequently
-- Stats will update automatically once per day
+1. Your website calls the Cloudflare Worker
+2. The worker checks its cache (valid for 24 hours)
+3. If not cached, it calls SerpApi to get fresh Scholar data
+4. The worker returns the citation count and h-index as JSON
+5. Your website displays the stats
 
 ## Troubleshooting
 
-### Stats show "—"
+### "SERPAPI_KEY not configured" error
+- Make sure you added the `SERPAPI_KEY` variable in your worker settings
+- Make sure it's set as a "Secret" (encrypted) variable
+
+### Stats show as "—"
 - Check browser console for errors
-- Verify Scholar ID is correct
-- Verify worker is deployed and accessible
-- Try visiting the worker URL directly in browser
+- Verify the worker URL in `script.js` is correct
+- Test the worker URL directly in your browser
 
-### Worker returns errors
-- Google Scholar may be blocking requests
-- Try adding a longer cache duration
-- Consider using SerpApi as an alternative (requires API key)
+### "Failed to fetch Scholar stats"
+- Check your SerpApi API key is valid
+- Verify you haven't exceeded your SerpApi quota (100/month on free tier)
+- Check SerpApi dashboard for error details
 
-## Alternative: Manual Updates
+## Cost
 
-If the worker approach doesn't work well, you can revert to manual updates:
+- **Cloudflare Workers**: Free (up to 100,000 requests/day)
+- **SerpApi**: Free tier (100 searches/month)
+- With 24-hour caching, you'll use ~30 API calls/month (well within free tier)
 
-```javascript
-async function loadCitationStats() {
-    const stats = {
-        citations: '245',  // Update manually
-        hIndex: '8'        // Update manually
-    };
-    
-    document.getElementById('total-citations').textContent = stats.citations;
-    document.getElementById('h-index').textContent = stats.hIndex;
-}
-```
+## Next Steps
 
-Update these values whenever your stats change significantly.
+1. Get SerpApi API key from serpapi.com
+2. Deploy the worker from the Cloudflare dashboard
+3. Add your API key as a secret variable
+4. Refresh your website and enjoy automatic stats! 🎉
