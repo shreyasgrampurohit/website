@@ -157,7 +157,7 @@ async function callClaude(messages, systemPrompt, apiKey, gen = {}) {
         if (!resp.ok) return { ok: false, status: resp.status, error: data };
 
         const text = data?.content?.[0]?.text || '';
-        return { ok: true, data: { candidates: [{ content: { parts: [{ text }] } }] } };
+        return { ok: true, data: { provider: 'claude', model: CLAUDE_MODEL, candidates: [{ content: { parts: [{ text }] } }] } };
     } catch (e) {
         return { ok: false, status: 500, error: e.message };
     }
@@ -191,7 +191,7 @@ async function callOpenAI(messages, systemPrompt, apiKey, gen = {}) {
         if (!resp.ok) return { ok: false, status: resp.status, error: data };
 
         const text = data?.choices?.[0]?.message?.content || '';
-        return { ok: true, data: { candidates: [{ content: { parts: [{ text }] } }] } };
+        return { ok: true, data: { provider: 'openai', model: OPENAI_MODEL, candidates: [{ content: { parts: [{ text }] } }] } };
     } catch (e) {
         return { ok: false, status: 500, error: e.message };
     }
@@ -208,7 +208,7 @@ async function callGemini(originalBody, apiKey) {
         const data = await resp.json();
         if (!resp.ok) return { ok: false, status: resp.status, error: data };
 
-        return { ok: true, data };
+        return { ok: true, data: { provider: 'gemini', model: GEMINI_MODEL, ...data } };
     } catch (e) {
         return { ok: false, status: 500, error: e.message };
     }
@@ -242,7 +242,7 @@ async function callGroq(messages, systemPrompt, apiKey, gen = {}) {
         if (!resp.ok) return { ok: false, status: resp.status, error: data };
 
         const text = data?.choices?.[0]?.message?.content || '';
-        return { ok: true, data: { candidates: [{ content: { parts: [{ text }] } }] } };
+        return { ok: true, data: { provider: 'groq', model: GROQ_MODEL, candidates: [{ content: { parts: [{ text }] } }] } };
     } catch (e) {
         return { ok: false, status: 500, error: e.message };
     }
@@ -277,7 +277,7 @@ async function callCohere(messages, systemPrompt, apiKey, gen = {}) {
         if (!resp.ok) return { ok: false, status: resp.status, error: data };
 
         const text = data?.text || data?.message || data?.generations?.[0]?.text || '';
-        return { ok: true, data: { candidates: [{ content: { parts: [{ text }] } }] } };
+        return { ok: true, data: { provider: 'cohere', model: COHERE_MODEL, candidates: [{ content: { parts: [{ text }] } }] } };
     } catch (e) {
         return { ok: false, status: 500, error: e.message };
     }
