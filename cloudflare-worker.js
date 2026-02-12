@@ -1,27 +1,13 @@
-/**
- * Cloudflare Worker - Gemini API Proxy (Service Worker Format)
- * 
- * Copy this ENTIRE file into your Cloudflare Worker in the Dashboard.
- * 
- * Setup:
- * 1. Go to https://dash.cloudflare.com/
- * 2. Workers & Pages > Create Application > Create Worker
- * 3. Click "Edit code"
- * 4. Replace ALL code with this file's contents
- * 5. Click "Save and Deploy"
- * 6. Go to Settings > Variables > Add variable:
- *    - Name: GEMINI_API_KEY
- *    - Value: your actual API key
- *    - Click "Encrypt"
- * 7. Click "Save and Deploy" again
- */
-
 const GEMINI_MODEL = 'gemini-2.0-flash';
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 const OPENAI_MODEL = 'gpt-4o-mini';
 const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
 const CLAUDE_MODEL = 'claude-3-5-sonnet-20241022';
 const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
+const GROQ_MODEL = 'llama-3.3-70b-versatile';
+const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+const COHERE_MODEL = 'command-r-plus';
+const COHERE_API_URL = 'https://api.cohere.com/v1/chat';
 
 const CORS_HEADERS = {
     'Access-Control-Allow-Origin': '*',
@@ -66,7 +52,25 @@ async function handleRequest(request, env) {
 
         const errors = [];
 
-        // Provider order: Claude -> OpenAI -> Gemini
+        // Provider order: Groq -> Cohere -> Claude -> OpenAI -> Gemini
+        const groqKey = env?.GROQ_API_KEY || null;
+        if (groqKey) {
+            const res = await callGroq(messages, systemPrompt, groqKey, body?.generationConfig);
+            if (res.ok) return respondJSON(res.data);
+            errors.push({ provider: 'groq', error: res.error, status: res.status });
+        } else {
+            errors.push({ provider: 'groq', error: 'GROQ_API_KEY not set' });
+        }
+
+        const cohereKey = env?.COHERE_API_KEY || null;
+        if (cohereKey) {
+            const res = await callCohere(messages, systemPrompt, cohereKey, body?.generationConfig);
+            if (res.ok) return respondJSON(res.data);
+            errors.push({ provider: 'cohere', error: res.error, status: res.status });
+        } else {
+            errors.push({ provider: 'cohere', error: 'COHERE_API_KEY not set' });
+        }
+
         const claudeKey = env?.CLAUDE_API_KEY || null;
         if (claudeKey) {
             const res = await callClaude(messages, systemPrompt, claudeKey, body?.generationConfig);
@@ -205,6 +209,75 @@ async function callGemini(originalBody, apiKey) {
         if (!resp.ok) return { ok: false, status: resp.status, error: data };
 
         return { ok: true, data };
+    } catch (e) {
+        return { ok: false, status: 500, error: e.message };
+    }
+}
+
+async function callGroq(messages, systemPrompt, apiKey, gen = {}) {
+    try {
+        const groqMessages = [];
+        if (systemPrompt) groqMessages.push({ role: 'system', content: systemPrompt });
+        for (const m of messages) {
+            groqMessages.push({ role: m.role, content: m.text });
+        }
+
+        const body = {
+            model: GROQ_MODEL,
+            messages: groqMessages,
+            temperature: gen.temperature ?? 0.7,
+            max_tokens: gen.maxOutputTokens || 1024,
+        };
+
+        const resp = await fetch(GROQ_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`,
+            },
+            body: JSON.stringify(body),
+        });
+
+        const data = await resp.json();
+        if (!resp.ok) return { ok: false, status: resp.status, error: data };
+
+        const text = data?.choices?.[0]?.message?.content || '';
+        return { ok: true, data: { candidates: [{ content: { parts: [{ text }] } }] } };
+    } catch (e) {
+        return { ok: false, status: 500, error: e.message };
+    }
+}
+
+async function callCohere(messages, systemPrompt, apiKey, gen = {}) {
+    try {
+        const cohereMessages = [];
+        if (systemPrompt) cohereMessages.push({ role: 'SYSTEM', message: systemPrompt });
+        for (const m of messages) {
+            cohereMessages.push({ role: m.role === 'assistant' ? 'CHATBOT' : 'USER', message: m.text });
+        }
+
+        const body = {
+            model: COHERE_MODEL,
+            messages: cohereMessages,
+            temperature: gen.temperature ?? 0.7,
+            max_tokens: gen.maxOutputTokens || 1024,
+        };
+
+        const resp = await fetch(COHERE_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`,
+                'Cohere-Version': '2022-12-06',
+            },
+            body: JSON.stringify(body),
+        });
+
+        const data = await resp.json();
+        if (!resp.ok) return { ok: false, status: resp.status, error: data };
+
+        const text = data?.text || data?.message || data?.generations?.[0]?.text || '';
+        return { ok: true, data: { candidates: [{ content: { parts: [{ text }] } }] } };
     } catch (e) {
         return { ok: false, status: 500, error: e.message };
     }
