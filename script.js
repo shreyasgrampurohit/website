@@ -269,7 +269,7 @@ function getSnippet(content, query) {
 async function loadCitationStats() {
     try {
         // TODO: Replace with your deployed worker URL
-        const SCHOLAR_WORKER_URL = 'scholar-stats.shreyasg0512.workers.dev';
+        const SCHOLAR_WORKER_URL = 'https://scholar-stats.shreyasg0512.workers.dev';
         
         const response = await fetch(SCHOLAR_WORKER_URL);
         
