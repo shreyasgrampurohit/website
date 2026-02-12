@@ -1,7 +1,7 @@
 // Cloudflare Worker to fetch Google Scholar stats
 // Deploy this separately as a new worker
 
-const SCHOLAR_URL = 'https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID&hl=en';
+const SCHOLAR_URL = 'https://scholar.google.com/citations?user=zMlAm6gAAAAJ&hl=en&authuser=1';
 const CACHE_DURATION = 86400; // 24 hours in seconds
 
 const CORS_HEADERS = {
