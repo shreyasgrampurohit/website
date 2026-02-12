@@ -19,6 +19,23 @@
     --max-width: 1100px;
 }
 
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --primary: #4299e1;
+    --primary-light: #3182ce;
+    --accent: #63b3ed;
+    --accent-light: #90cdf4;
+    --bg: #1a202c;
+    --bg-alt: #2d3748;
+    --text: #f7fafc;
+    --text-secondary: #cbd5e0;
+    --text-light: #a0aec0;
+    --border: #4a5568;
+    --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.4);
+}
+
 /* ===== Reset & Base ===== */
 *, *::before, *::after {
     margin: 0;
@@ -56,10 +73,10 @@ a:hover {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--bg);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
-    transition: box-shadow var(--transition);
+    transition: box-shadow var(--transition), background var(--transition);
 }
 
 .navbar.scrolled {
@@ -126,6 +143,37 @@ a:hover {
     background: var(--text);
     border-radius: 2px;
     transition: all var(--transition);
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.search-toggle,
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.search-toggle:hover,
+.dark-mode-toggle:hover {
+    color: var(--accent);
+    background: var(--bg-alt);
 }
 
 /* ===== Hero ===== */
@@ -357,6 +405,113 @@ a:hover {
 }
 
 /* ===== Publications ===== */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.citation-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.stat-item i {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.publication-filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    background: var(--bg-alt);
+    border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.filter-group label i {
+    color: var(--accent);
+}
+
+.filter-group select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.filter-group select:hover,
+.filter-group select:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+.filter-reset {
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.filter-reset:hover {
+    background: var(--primary-light);
+}
+
+.publication.hidden {
+    display: none;
+}
+
 .subsection-title {
     font-size: 1.1rem;
     font-weight: 600;
@@ -756,7 +911,7 @@ a:hover {
         top: 64px;
         left: 0;
         right: 0;
-        background: white;
+        background: var(--bg);
         flex-direction: column;
         padding: 1rem 2rem;
         border-bottom: 1px solid var(--border);
@@ -765,6 +920,47 @@ a:hover {
 
     .nav-links.open {
         display: flex;
+    }
+
+    .nav-controls {
+        order: -1;
+        margin-right: 0.5rem;
+        margin-left: 0;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .citation-stats {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .publication-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group select {
+        width: 100%;
+    }
+
+    .filter-reset {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .search-modal-content {
+        width: 95%;
+        max-height: 80vh;
     }
 
     .hero {
@@ -867,6 +1063,180 @@ a:hover {
 
 .animate-in {
     animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ===== Search Modal ===== */
+.search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.search-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-modal-content {
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 90%;
+    max-width: 650px;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.search-modal.active .search-modal-content {
+    transform: translateY(0);
+}
+
+.search-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.search-header i {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.search-header input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--text);
+    background: transparent;
+}
+
+.search-header input::placeholder {
+    color: var(--text-light);
+}
+
+.search-close {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all var(--transition);
+}
+
+.search-close:hover {
+    background: var(--bg-alt);
+    color: var(--text);
+}
+
+.search-results {
+    overflow-y: auto;
+    max-height: calc(70vh - 80px);
+    padding: 1rem;
+}
+
+.search-results::-webkit-scrollbar {
+    width: 6px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+.search-hint {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--text-light);
+}
+
+.search-hint i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    opacity: 0.5;
+}
+
+.search-hint p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.search-result-item {
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    border: 1px solid transparent;
+}
+
+.search-result-item:hover {
+    background: var(--bg-alt);
+    border-color: var(--border);
+}
+
+.search-result-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.search-result-type {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    background: var(--accent);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.search-result-snippet {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.search-result-snippet mark {
+    background: var(--accent-light);
+    color: var(--text);
+    padding: 0.1rem 0.2rem;
+    border-radius: 2px;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--text-light);
+}
+
+.no-results i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
 }
 
 /* ===== Chatbot Widget ===== */

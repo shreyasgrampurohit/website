@@ -19,6 +19,14 @@
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
         </button>
+        <div class="nav-controls">
+            <button class="search-toggle" id="searchToggle" aria-label="Search" title="Search">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
         <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
             <li><a href="#publications">Publications</a></li>
@@ -110,11 +118,56 @@
 <!-- Publications Section -->
 <section class="section section-alt" id="publications">
     <div class="container">
-        <h2 class="section-title">Publications</h2>
+        <div class="section-header">
+            <h2 class="section-title">Publications</h2>
+            <div class="citation-stats">
+                <div class="stat-item">
+                    <i class="fas fa-quote-right"></i>
+                    <span class="stat-value" id="total-citations">—</span>
+                    <span class="stat-label">Citations</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="stat-value" id="h-index">—</span>
+                    <span class="stat-label">h-index</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication Filters -->
+        <div class="publication-filters">
+            <div class="filter-group">
+                <label><i class="fas fa-calendar"></i> Year:</label>
+                <select id="year-filter">
+                    <option value="all">All Years</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label><i class="fas fa-building"></i> Venue:</label>
+                <select id="venue-filter">
+                    <option value="all">All Venues</option>
+                    <option value="cal">IEEE CAL</option>
+                    <option value="icassp">ICASSP</option>
+                    <option value="preprint">Preprint</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label><i class="fas fa-tag"></i> Topic:</label>
+                <select id="topic-filter">
+                    <option value="all">All Topics</option>
+                    <option value="architecture">Computer Architecture</option>
+                    <option value="signal-processing">Signal Processing</option>
+                    <option value="deep-learning">Deep Learning</option>
+                </select>
+            </div>
+            <button class="filter-reset" id="reset-filters"><i class="fas fa-redo"></i> Reset</button>
+        </div>
 
         <h3 class="subsection-title">Accepted / Published</h3>
         <div class="publication-list">
-            <div class="publication">
+            <div class="publication" data-year="2025" data-venue="cal" data-topics="architecture deep-learning">
                 <div class="pub-marker"></div>
                 <div class="pub-content">
                     <p class="pub-title">QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture</p>
@@ -127,7 +180,7 @@
                 </div>
             </div>
 
-            <div class="publication">
+            <div class="publication" data-year="2026" data-venue="icassp" data-topics="signal-processing deep-learning">
                 <div class="pub-marker"></div>
                 <div class="pub-content">
                     <p class="pub-title">Two-Dimensional Tomographic Reconstruction From Projections With Unknown Angles and Unknown Spatial Shifts</p>
@@ -142,7 +195,7 @@
 
         <h3 class="subsection-title">Preprints / Under Review</h3>
         <div class="publication-list">
-            <div class="publication">
+            <div class="publication" data-year="2025" data-venue="preprint" data-topics="signal-processing deep-learning">
                 <div class="pub-marker"></div>
                 <div class="pub-content">
                     <p class="pub-title">Verifiable Deep Quantitative Group Testing</p>
@@ -414,6 +467,25 @@
         </div>
     </div>
 </footer>
+
+<!-- Search Modal -->
+<div class="search-modal" id="searchModal">
+    <div class="search-modal-content">
+        <div class="search-header">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search publications, research, projects, skills..." autofocus>
+            <button class="search-close" id="searchClose" aria-label="Close search">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="search-results" id="searchResults">
+            <div class="search-hint">
+                <i class="fas fa-lightbulb"></i>
+                <p>Try searching for "tomography", "computer architecture", "pytorch", or any keyword</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="script.js"></script>
 <script src="config.js"></script>
