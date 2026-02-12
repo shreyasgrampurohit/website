@@ -152,7 +152,11 @@ Refer to Shreyas in third person unless quoting directly.`;
         const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text;
         if (!reply) throw new Error('No response from Gemini');
 
-        return reply;
+        return {
+            text: reply,
+            provider: data?.provider || 'unknown',
+            model: data?.model || 'unknown',
+        };
     }
 
     // --- Chat Logic ---
@@ -171,12 +175,12 @@ Refer to Shreyas in third person unless quoting directly.`;
             // Search knowledge base
             const relevant = searchKnowledge(message);
 
-            // Call Gemini
+            // Call proxy (multi-provider) and capture provider/model
             const reply = await callGemini(message, relevant);
 
             removeTypingIndicator();
-            appendMessage('bot', reply);
-            conversationHistory.push({ role: 'assistant', text: reply });
+            appendMessage('bot', reply.text, false, reply.provider, reply.model);
+            conversationHistory.push({ role: 'assistant', text: reply.text });
         } catch (err) {
             removeTypingIndicator();
             appendMessage('bot', `⚠️ ${err.message}`, true);
@@ -288,19 +292,25 @@ Refer to Shreyas in third person unless quoting directly.`;
         handleUserMessage(msg);
     }
 
-    function appendMessage(role, text, isError = false) {
+    function appendMessage(role, text, isError = false, provider = null, model = null) {
         const container = document.getElementById('chatbot-messages');
         const bubble = document.createElement('div');
         bubble.className = `chatbot-msg chatbot-msg-${role}${isError ? ' chatbot-msg-error' : ''}`;
         
         if (role === 'bot') {
-            bubble.innerHTML = renderMarkdown(text);
+            const meta = provider ? `<div class="chatbot-meta"><span class="chatbot-provider-badge">${formatProvider(provider)}${model ? ` · ${model}` : ''}</span></div>` : '';
+            bubble.innerHTML = `${renderMarkdown(text)}${meta}`;
         } else {
             bubble.textContent = text;
         }
 
         container.appendChild(bubble);
         container.scrollTop = container.scrollHeight;
+    }
+
+    function formatProvider(name) {
+        if (!name) return 'Unknown';
+        return name.charAt(0).toUpperCase() + name.slice(1);
     }
 
     function showTypingIndicator() {
