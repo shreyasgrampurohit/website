@@ -91,38 +91,41 @@ const topicFilter = document.getElementById('topic-filter');
 const resetFilters = document.getElementById('reset-filters');
 const publications = document.querySelectorAll('.publication');
 
-function filterPublications() {
-    const year = yearFilter.value;
-    const venue = venueFilter.value;
-    const topic = topicFilter.value;
+// Only enable filters if they exist (publications.html page)
+if (yearFilter && venueFilter && topicFilter && resetFilters) {
+    function filterPublications() {
+        const year = yearFilter.value;
+        const venue = venueFilter.value;
+        const topic = topicFilter.value;
 
-    publications.forEach(pub => {
-        const pubYear = pub.dataset.year;
-        const pubVenue = pub.dataset.venue;
-        const pubTopics = pub.dataset.topics || '';
+        publications.forEach(pub => {
+            const pubYear = pub.dataset.year;
+            const pubVenue = pub.dataset.venue;
+            const pubTopics = pub.dataset.topics || '';
 
-        const matchYear = year === 'all' || pubYear === year;
-        const matchVenue = venue === 'all' || pubVenue === venue;
-        const matchTopic = topic === 'all' || pubTopics.includes(topic);
+            const matchYear = year === 'all' || pubYear === year;
+            const matchVenue = venue === 'all' || pubVenue === venue;
+            const matchTopic = topic === 'all' || pubTopics.includes(topic);
 
-        if (matchYear && matchVenue && matchTopic) {
-            pub.classList.remove('hidden');
-        } else {
-            pub.classList.add('hidden');
-        }
+            if (matchYear && matchVenue && matchTopic) {
+                pub.classList.remove('hidden');
+            } else {
+                pub.classList.add('hidden');
+            }
+        });
+    }
+
+    yearFilter.addEventListener('change', filterPublications);
+    venueFilter.addEventListener('change', filterPublications);
+    topicFilter.addEventListener('change', filterPublications);
+
+    resetFilters.addEventListener('click', () => {
+        yearFilter.value = 'all';
+        venueFilter.value = 'all';
+        topicFilter.value = 'all';
+        filterPublications();
     });
 }
-
-yearFilter.addEventListener('change', filterPublications);
-venueFilter.addEventListener('change', filterPublications);
-topicFilter.addEventListener('change', filterPublications);
-
-resetFilters.addEventListener('click', () => {
-    yearFilter.value = 'all';
-    venueFilter.value = 'all';
-    topicFilter.value = 'all';
-    filterPublications();
-});
 
 // ===== Global Search =====
 const searchToggle = document.getElementById('searchToggle');

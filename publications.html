@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Shreyas Grampurohit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">SG</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-controls">
+            <button class="search-toggle" id="searchToggle" aria-label="Search" title="Search">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="publications.html" class="active">Publications</a></li>
+            <li><a href="index.html#research">Research</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#teaching">Teaching</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Publications Page -->
+<section class="section section-alt" style="padding-top: 8rem;">
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <h1 class="page-title">Publications</h1>
+        </div>
+
+        <div class="section-header">
+            <div class="citation-stats">
+                <div class="stat-item">
+                    <i class="fas fa-quote-right"></i>
+                    <span class="stat-value" id="total-citations">—</span>
+                    <span class="stat-label">Citations</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="stat-value" id="h-index">—</span>
+                    <span class="stat-label">h-index</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication Filters -->
+        <div class="publication-filters">
+            <div class="filter-group">
+                <label><i class="fas fa-calendar"></i> Year:</label>
+                <select id="year-filter">
+                    <option value="all">All Years</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label><i class="fas fa-building"></i> Venue:</label>
+                <select id="venue-filter">
+                    <option value="all">All Venues</option>
+                    <option value="cal">IEEE CAL</option>
+                    <option value="icassp">ICASSP</option>
+                    <option value="preprint">Preprint</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label><i class="fas fa-tag"></i> Topic:</label>
+                <select id="topic-filter">
+                    <option value="all">All Topics</option>
+                    <option value="architecture">Computer Architecture</option>
+                    <option value="signal-processing">Signal Processing</option>
+                    <option value="deep-learning">Deep Learning</option>
+                </select>
+            </div>
+            <button class="filter-reset" id="reset-filters"><i class="fas fa-redo"></i> Reset</button>
+        </div>
+
+        <h3 class="subsection-title">Accepted / Published</h3>
+        <div class="publication-list">
+            <div class="publication" data-year="2025" data-venue="cal" data-topics="architecture deep-learning">
+                <div class="pub-marker"></div>
+                <div class="pub-content">
+                    <p class="pub-title">QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture</p>
+                    <p class="pub-authors">Shvetank Prakash, Andrew Cheng, Jason Yik, Arya Tschand, Radhika Ghosal, Ikechukwu Uchendu, Jessica Quaye, Jeffrey Ma, Shreyas Grampurohit, Sofia Giannuzzi, Arnav Balyan, Fin Amin, Aadya Pipersenia, Yash Choudhary, Ankita Nayak, Amir Yazdanbakhsh, Vijay Janapa Reddi</p>
+                    <p class="pub-venue"><em>IEEE Computer Architecture Letters (CAL)</em>, 2025</p>
+                    <p class="pub-note"><i class="fas fa-award"></i> Selected for the Best of CAL session at HPCA 2026 (one of 3 papers from 90+)</p>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/pdf/2501.01892" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication" data-year="2026" data-venue="icassp" data-topics="signal-processing deep-learning">
+                <div class="pub-marker"></div>
+                <div class="pub-content">
+                    <p class="pub-title">Two-Dimensional Tomographic Reconstruction From Projections With Unknown Angles and Unknown Spatial Shifts</p>
+                    <p class="pub-authors">SJ Grampurohit, S Mulleti, A Rajwade</p>
+                    <p class="pub-venue"><em>IEEE ICASSP 2026</em></p>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/pdf/2511.22890" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="subsection-title">Preprints / Under Review</h3>
+        <div class="publication-list">
+            <div class="publication" data-year="2025" data-venue="preprint" data-topics="signal-processing deep-learning">
+                <div class="pub-marker"></div>
+                <div class="pub-content">
+                    <p class="pub-title">Verifiable Deep Quantitative Group Testing</p>
+                    <p class="pub-authors">SJ Grampurohit, S Mulleti, A Rajwade</p>
+                    <p class="pub-venue">Preprint, 2025</p>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/pdf/2512.07279" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2026 Shreyas Grampurohit</p>
+            <div class="footer-links">
+                <a href="mailto:shreyasgrampurohit@iitb.ac.in"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/shreyasgrampurohit" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/shreyasgrampurohit" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Search Modal -->
+<div class="search-modal" id="searchModal">
+    <div class="search-modal-content">
+        <div class="search-header">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search publications, research, projects, skills..." autofocus>
+            <button class="search-close" id="searchClose" aria-label="Close search">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="search-results" id="searchResults">
+            <div class="search-hint">
+                <i class="fas fa-lightbulb"></i>
+                <p>Try searching for "tomography", "computer architecture", "pytorch", or any keyword</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="config.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>
