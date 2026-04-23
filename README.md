@@ -8,6 +8,7 @@ Academic website with AI-powered chatbot built with vanilla HTML/CSS/JS and Goog
 - 🤖 RAG-based chatbot with knowledge from your documents
 - 📝 Publications, research, projects, and experience sections
 - 🎨 Professional academic styling
+- 📊 Optional website traffic analytics (Google Analytics 4)
 
 ## Live Site
 
@@ -41,6 +42,30 @@ const CONFIG = {
 ```
 
 Commit and push the change.
+
+## Website Traffic Analytics Setup
+
+This project now supports optional Google Analytics 4 tracking via `analytics.js`.
+
+1. Create a GA4 property in Google Analytics.
+2. Copy your GA4 Measurement ID (format: `G-XXXXXXXXXX`).
+3. Update `config.js`:
+
+```js
+const CONFIG = {
+   PROXY_URL: 'https://gemini-proxy.your-subdomain.workers.dev',
+   ANALYTICS: {
+      ENABLED: true,
+      GA_MEASUREMENT_ID: 'G-XXXXXXXXXX',
+   },
+};
+```
+
+4. Commit and push.
+
+Notes:
+- Keep `ENABLED: false` if you want analytics disabled.
+- No analytics secrets are stored in this repo; GA4 uses only the public measurement ID.
 
 ### Adding Materials
 
