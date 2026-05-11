@@ -47,6 +47,8 @@ async function handleRequest(request, env) {
             });
         }
 
+        logChatQuestionIfEnabled(body, env, request);
+
         const systemPrompt = body?.systemInstruction?.parts?.[0]?.text || '';
         const messages = normalizeMessages(body.contents);
 
@@ -128,6 +130,45 @@ function normalizeMessages(contents) {
         role: c.role === 'model' ? 'assistant' : 'user',
         text: (c.parts || []).map(p => p.text || '').join('\n')
     }));
+}
+
+function logChatQuestionIfEnabled(body, env, request) {
+    const enabled = String(env?.LOG_CHAT_QUESTIONS || '').toLowerCase() === 'true';
+    if (!enabled) return;
+
+    const question = extractLatestUserQuestion(body?.contents || []);
+    if (!question) return;
+
+    const event = {
+        type: 'chat_question',
+        timestamp: new Date().toISOString(),
+        question: question.slice(0, 1000),
+        country: request?.cf?.country || null,
+        colo: request?.cf?.colo || null,
+    };
+
+    console.log(JSON.stringify(event));
+}
+
+function extractLatestUserQuestion(contents) {
+    for (let i = contents.length - 1; i >= 0; i--) {
+        const msg = contents[i];
+        if (msg?.role !== 'user') continue;
+
+        const text = (msg.parts || []).map(p => p?.text || '').join('\n').trim();
+        if (!text) continue;
+
+        const marker = 'Question:';
+        const markerIndex = text.lastIndexOf(marker);
+        if (markerIndex !== -1) {
+            const extracted = text.slice(markerIndex + marker.length).trim();
+            if (extracted) return extracted;
+        }
+
+        return text;
+    }
+
+    return '';
 }
 
 async function callClaude(messages, systemPrompt, apiKey, gen = {}) {
